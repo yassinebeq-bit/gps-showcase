@@ -3,188 +3,182 @@ import scanner from "@/assets/prod-scanner.jpg";
 import applicator from "@/assets/prod-applicator.jpg";
 import consumables from "@/assets/prod-consumables.jpg";
 import software from "@/assets/prod-software.jpg";
+import mobile from "@/assets/prod-mobile.jpg";
+import textile from "@/assets/prod-textile.jpg";
+
+export type Marque = "Zebra" | "Avery Dennison" | "POSTEK" | "NiceLabel";
 
 export type Produit = {
   id: string;
-  nom: string;
-  marque: "Zebra" | "Avery Dennison" | "POSTEK" | "NiceLabel";
+  modele: string;
+  marque: Marque;
   categorie: string;
   description: string;
   points: string[];
   image: string;
 };
 
-export const marques = ["Zebra", "Avery Dennison", "POSTEK", "NiceLabel"] as const;
-
-export const categories = [
-  "Imprimantes industrielles",
-  "Imprimantes de bureau",
-  "Imprimantes mobiles",
-  "Terminaux & lecteurs",
-  "Systèmes d'étiquetage automatique",
-  "Consommables",
-  "Logiciels",
-] as const;
+export const marques: Marque[] = ["Zebra", "Avery Dennison", "POSTEK", "NiceLabel"];
 
 export const produits: Produit[] = [
   {
+    id: "zebra-zt610",
+    modele: "ZT610",
+    marque: "Zebra",
+    categorie: "Impression industrielle",
+    description:
+      "Imprimante industrielle haut de gamme pour les environnements de production exigeants et les volumes d'étiquettes élevés.",
+    points: ["Résolutions 203 / 300 / 600 dpi", "Écran couleur tactile", "Châssis métallique intensif"],
+    image: printer,
+  },
+  {
     id: "zebra-zt411",
-    nom: "Zebra ZT411",
+    modele: "ZT411",
     marque: "Zebra",
-    categorie: "Imprimantes industrielles",
+    categorie: "Impression industrielle",
     description:
-      "Imprimante industrielle transfert thermique conçue pour les cadences soutenues en production et en entrepôt.",
-    points: ["Largeur d'impression 4\"", "Écran couleur tactile", "Connectivité étendue"],
+      "Imprimante industrielle 4 pouces pour l'étiquetage de cartons, palettes et pièces en atelier ou en entrepôt.",
+    points: ["Résolutions 203 / 300 / 600 dpi", "Écran tactile couleur", "Connectivité filaire et sans fil"],
     image: printer,
   },
   {
-    id: "zebra-zt231",
-    nom: "Zebra ZT231",
+    id: "zebra-zq521",
+    modele: "ZQ521",
     marque: "Zebra",
-    categorie: "Imprimantes industrielles",
+    categorie: "Étiquetage mobile",
     description:
-      "Imprimante industrielle robuste et simple à déployer pour l'étiquetage quotidien de palettes et de cartons.",
-    points: ["Prise en main rapide", "Construction métallique", "Maintenance facilitée"],
-    image: printer,
-  },
-  {
-    id: "zebra-zd421",
-    nom: "Zebra ZD421",
-    marque: "Zebra",
-    categorie: "Imprimantes de bureau",
-    description:
-      "Imprimante de bureau compacte pour postes d'expédition, laboratoires et points de contrôle qualité.",
-    points: ["Format compact", "Cartouche ruban en option", "Installation simple"],
-    image: printer,
-  },
-  {
-    id: "zebra-zq630",
-    nom: "Zebra ZQ630",
-    marque: "Zebra",
-    categorie: "Imprimantes mobiles",
-    description:
-      "Imprimante mobile durcie pour l'étiquetage en mouvement dans les entrepôts et sur les quais.",
-    points: ["Autonomie longue durée", "Sans fil", "Résistante aux chocs"],
-    image: printer,
+      "Imprimante mobile durcie pour l'impression d'étiquettes directement sur les quais, en magasin ou en tournée.",
+    points: ["Impression 4 pouces mobile", "Résolution 203 dpi", "Conception durcie, autonomie longue"],
+    image: mobile,
   },
   {
     id: "zebra-mc3300",
-    nom: "Zebra MC3300",
+    modele: "MC3300",
     marque: "Zebra",
     categorie: "Terminaux & lecteurs",
     description:
-      "Terminal mobile durci pour la collecte de données, l'inventaire et la préparation de commandes.",
-    points: ["Lecture 1D/2D", "Android", "Ergonomie pistolet ou droite"],
+      "Terminal mobile durci pour l'inventaire, la réception et la préparation de commandes avec lecture de codes-barres.",
+    points: ["Lecture codes-barres 1D / 2D", "Écran tactile Android", "Usage intensif en entrepôt"],
     image: scanner,
   },
   {
-    id: "zebra-ds2208",
-    nom: "Zebra DS2208",
-    marque: "Zebra",
-    categorie: "Terminaux & lecteurs",
+    id: "avery-snap-500",
+    modele: "SNAP™ 500",
+    marque: "Avery Dennison",
+    categorie: "Étiquettes textiles",
     description:
-      "Lecteur de codes-barres filaire polyvalent pour comptoirs, réception et contrôle qualité.",
-    points: ["Lecture 1D/2D", "Plug and play", "Usage intensif"],
-    image: scanner,
+      "Système d'impression dédié aux étiquettes textiles : étiquettes d'entretien, de composition et de traçabilité vêtement.",
+    points: ["Impression sur rubans textiles", "Résolution 300 dpi", "Étiquettes d'entretien et de taille"],
+    image: textile,
   },
   {
-    id: "postek-g3106",
-    nom: "POSTEK G-3106",
-    marque: "POSTEK",
-    categorie: "Imprimantes industrielles",
+    id: "avery-adtp2",
+    modele: "Monarch® ADTP2",
+    marque: "Avery Dennison",
+    categorie: "Identification logistique & retail",
     description:
-      "Imprimante industrielle haute résolution adaptée aux étiquettes de petite taille et aux marquages détaillés.",
-    points: ["Haute résolution", "Châssis industriel", "Bon rapport performance/coût"],
-    image: printer,
-  },
-  {
-    id: "postek-tx3r",
-    nom: "POSTEK TX3r",
-    marque: "POSTEK",
-    categorie: "Imprimantes industrielles",
-    description:
-      "Imprimante industrielle RFID pour l'encodage et l'impression d'étiquettes intelligentes.",
-    points: ["Encodage RFID UHF", "Impression haute définition", "Production continue"],
-    image: printer,
-  },
-  {
-    id: "postek-iq200",
-    nom: "POSTEK iQ200",
-    marque: "POSTEK",
-    categorie: "Imprimantes de bureau",
-    description:
-      "Imprimante de bureau fiable pour les volumes moyens en atelier, magasin et logistique.",
-    points: ["Encombrement réduit", "Fonctionnement silencieux", "Entretien simple"],
+      "Imprimante d'étiquettes et d'étiquettes cartonnées pour l'identification logistique, le marquage produit et le retail.",
+    points: ["Codes-barres 1D / 2D", "Résolution 203 / 300 dpi", "Supports papier et carton"],
     image: printer,
   },
   {
     id: "avery-als306",
-    nom: "Avery Dennison ALS 306",
+    modele: "ALS 306",
     marque: "Avery Dennison",
-    categorie: "Systèmes d'étiquetage automatique",
+    categorie: "Étiquetage automatique",
     description:
-      "Système d'application automatique d'étiquettes intégrable sur ligne de conditionnement.",
-    points: ["Application automatique", "Intégration sur convoyeur", "Cadence industrielle"],
+      "Système d'application automatique d'étiquettes intégrable sur ligne de conditionnement et convoyeur.",
+    points: ["Pose automatique en ligne", "Cadence industrielle", "Intégration sur machine"],
     image: applicator,
   },
   {
-    id: "avery-pcm",
-    nom: "Avery Dennison PCM",
-    marque: "Avery Dennison",
-    categorie: "Systèmes d'étiquetage automatique",
+    id: "postek-em210",
+    modele: "EM210",
+    marque: "POSTEK",
+    categorie: "Impression de bureau",
     description:
-      "Module impression-pose pour l'étiquetage variable des cartons et palettes en fin de ligne.",
-    points: ["Impression et pose", "Données variables", "Fonctionnement continu"],
-    image: applicator,
-  },
-  {
-    id: "avery-monarch",
-    nom: "Avery Dennison Monarch",
-    marque: "Avery Dennison",
-    categorie: "Imprimantes de bureau",
-    description:
-      "Solutions d'impression d'étiquettes et d'étiquettes prix pour le retail et le textile.",
-    points: ["Étiquetage retail", "Étiquettes cartonnées", "Marquage produit"],
+      "Imprimante compacte pour l'étiquetage au poste de travail : expédition, réception et contrôle qualité.",
+    points: ["Résolution 203 dpi", "Format compact", "Codes-barres 1D / 2D"],
     image: printer,
   },
   {
-    id: "avery-consommables",
-    nom: "Étiquettes & rubans Avery Dennison",
+    id: "postek-tx3",
+    modele: "TX3",
+    marque: "POSTEK",
+    categorie: "Impression industrielle",
+    description:
+      "Imprimante industrielle haute définition pour les petites étiquettes et les marquages techniques détaillés.",
+    points: ["Résolution jusqu'à 600 dpi", "Châssis industriel", "Impression fine et régulière"],
+    image: printer,
+  },
+  {
+    id: "postek-zx2",
+    modele: "ZX2",
+    marque: "POSTEK",
+    categorie: "Impression industrielle",
+    description:
+      "Imprimante industrielle polyvalente pour les volumes moyens en production, logistique et agroalimentaire.",
+    points: ["Résolution 203 / 300 dpi", "Écran tactile couleur", "Utilisation continue"],
+    image: printer,
+  },
+  {
+    id: "postek-zx3",
+    modele: "ZX3",
+    marque: "POSTEK",
+    categorie: "Impression industrielle",
+    description:
+      "Imprimante industrielle robuste pour l'étiquetage intensif de cartons et de palettes en fin de ligne.",
+    points: ["Résolution jusqu'à 600 dpi", "Écran tactile", "Grande capacité de rouleau"],
+    image: printer,
+  },
+  {
+    id: "postek-gx3",
+    modele: "GX3",
+    marque: "POSTEK",
+    categorie: "Impression industrielle",
+    description:
+      "Imprimante industrielle conçue pour les ateliers de production nécessitant précision et fiabilité au quotidien.",
+    points: ["Résolution 203 / 300 dpi", "Mécanique renforcée", "Maintenance simplifiée"],
+    image: printer,
+  },
+  {
+    id: "postek-g6000",
+    modele: "G6000",
+    marque: "POSTEK",
+    categorie: "Impression industrielle",
+    description:
+      "Imprimante industrielle grande largeur pour les étiquettes logistiques et les supports de format important.",
+    points: ["Impression grande largeur", "Résolution 203 / 300 dpi", "Volumes d'impression élevés"],
+    image: printer,
+  },
+  {
+    id: "consommables",
+    modele: "Étiquettes & rubans transfert thermique",
     marque: "Avery Dennison",
     categorie: "Consommables",
     description:
-      "Étiquettes adhésives, étiquettes textiles et rubans transfert thermique adaptés à chaque support.",
+      "Étiquettes adhésives, étiquettes textiles et rubans transfert thermique sélectionnés selon le support et l'environnement.",
     points: ["Formats sur mesure", "Adhésifs spécifiques", "Rubans cire, mixte, résine"],
     image: consumables,
   },
   {
-    id: "consommables-gps",
-    nom: "Consommables d'identification",
-    marque: "Zebra",
-    categorie: "Consommables",
-    description:
-      "Rouleaux d'étiquettes et rubans compatibles avec l'ensemble du parc d'imprimantes installé.",
-    points: ["Étiquettes papier et synthétiques", "Rubans TTR", "Approvisionnement régulier"],
-    image: consumables,
-  },
-  {
     id: "nicelabel-designer",
-    nom: "NiceLabel Designer",
+    modele: "NiceLabel Designer",
     marque: "NiceLabel",
-    categorie: "Logiciels",
+    categorie: "Logiciels d'étiquetage",
     description:
-      "Logiciel de conception d'étiquettes avec gestion des données variables et des modèles normalisés.",
-    points: ["Conception d'étiquettes", "Données variables", "Modèles réutilisables"],
+      "Logiciel de conception d'étiquettes avec codes-barres, données variables et modèles normalisés.",
+    points: ["Conception d'étiquettes", "Codes-barres 1D / 2D", "Données variables"],
     image: software,
   },
   {
     id: "nicelabel-lms",
-    nom: "NiceLabel LMS",
+    modele: "NiceLabel LMS",
     marque: "NiceLabel",
-    categorie: "Logiciels",
+    categorie: "Logiciels d'étiquetage",
     description:
-      "Plateforme de gestion centralisée de l'étiquetage : versions, droits, historique et intégration ERP.",
-    points: ["Gestion centralisée", "Traçabilité des versions", "Intégration ERP/WMS"],
+      "Plateforme de gestion centralisée de l'étiquetage : droits, versions, historique et connexion aux systèmes ERP / WMS.",
+    points: ["Gestion centralisée", "Traçabilité des versions", "Intégration ERP / WMS"],
     image: software,
   },
 ];
@@ -222,3 +216,74 @@ export function devisMailto(produit?: string) {
   ].join("\n");
   return `mailto:${CONTACT.email}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
 }
+
+export const secteurs = [
+  {
+    titre: "Textile et habillement",
+    texte:
+      "Étiquettes d'entretien, de composition et de taille, marquage produit et traçabilité des séries de production.",
+  },
+  {
+    titre: "Logistique et entreposage",
+    texte:
+      "Étiquetage de colis et de palettes, adressage d'emplacements, préparation de commandes et inventaires.",
+  },
+  {
+    titre: "Automobile",
+    texte:
+      "Identification des pièces et des kits, étiquettes techniques résistantes et suivi des flux de production.",
+  },
+  {
+    titre: "Industrie manufacturière",
+    texte:
+      "Marquage des produits semi-finis et finis, suivi des ordres de fabrication et contrôle qualité en ligne.",
+  },
+  {
+    titre: "Agroalimentaire",
+    texte:
+      "Étiquetage des lots et des dates, traçabilité amont-aval et supports adaptés au froid et à l'humidité.",
+  },
+  {
+    titre: "Béton préfabriqué",
+    texte:
+      "Identification des éléments préfabriqués, étiquettes résistantes aux chantiers et suivi des livraisons.",
+  },
+  {
+    titre: "Retail et distribution",
+    texte:
+      "Étiquetage prix et produit, marquage rayon, réception marchandise et inventaires en point de vente.",
+  },
+];
+
+export const services = [
+  {
+    titre: "Conseil et étude de besoin",
+    texte:
+      "Analyse de vos flux et de vos environnements de travail pour définir la solution d'identification adaptée.",
+  },
+  {
+    titre: "Fourniture de matériel",
+    texte:
+      "Imprimantes industrielles, mobiles et de bureau, terminaux, lecteurs et systèmes d'étiquetage automatique.",
+  },
+  {
+    titre: "Consommables",
+    texte:
+      "Étiquettes et rubans transfert thermique sélectionnés selon le support, l'usage et les contraintes du site.",
+  },
+  {
+    titre: "Installation et mise en service",
+    texte:
+      "Paramétrage des équipements, intégration sur vos postes et lignes, et accompagnement au démarrage.",
+  },
+  {
+    titre: "Maintenance et SAV",
+    texte:
+      "Entretien préventif, dépannage et fourniture de pièces pour maintenir votre parc en fonctionnement.",
+  },
+  {
+    titre: "Logiciels et intégration",
+    texte:
+      "Mise en place des logiciels d'étiquetage et connexion aux systèmes de gestion existants.",
+  },
+];
