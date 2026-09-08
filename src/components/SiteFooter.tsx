@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className="border-t border-border/60 bg-secondary/40">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-3 lg:px-8">
         <div>
-          <Logo />
+          <Logo className="max-w-[18rem]" />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Solutions d'identification, de codes-barres et de traçabilité pour l'industrie et la
             distribution au Maroc.
