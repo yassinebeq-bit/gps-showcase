@@ -44,7 +44,7 @@ function Index() {
           height={1008}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[var(--overlay-hero)]" />
+        <div className="absolute inset-0 overlay-hero" />
         <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-36">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
             Casablanca — Maroc
@@ -59,7 +59,7 @@ function Index() {
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
               to="/produits"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--gradient-brand)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-brand)] transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
             >
               Découvrir le catalogue <ArrowRight className="h-4 w-4" />
             </Link>
@@ -119,7 +119,7 @@ function Index() {
             {vedettes.map((p) => (
               <article
                 key={p.id}
-                className="group overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-[var(--shadow-card)]"
+                className="group overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-card"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-secondary">
                   <img
@@ -194,7 +194,7 @@ function Index() {
         </div>
       </Section>
 
-      <section className="border-t border-border/60 bg-[var(--gradient-deep)]">
+      <section className="border-t border-border/60 bg-deep">
         <div className="mx-auto grid max-w-7xl gap-6 px-5 py-16 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:px-8 lg:py-20">
           <div>
             <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
@@ -207,7 +207,7 @@ function Index() {
           </div>
           <a
             href={devisMailto()}
-            className="inline-block w-fit rounded-full bg-[var(--gradient-brand)] px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-brand)] transition-transform hover:-translate-y-0.5"
+            className="inline-block w-fit rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
           >
             Demander un devis
           </a>

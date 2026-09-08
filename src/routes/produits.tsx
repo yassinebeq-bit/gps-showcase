@@ -51,7 +51,7 @@ function ProduitsPage() {
               aria-pressed={filtre === m}
               className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-colors ${
                 filtre === m
-                  ? "border-transparent bg-[var(--gradient-brand)] text-primary-foreground shadow-[var(--shadow-brand)]"
+                  ? "border-transparent bg-brand text-primary-foreground shadow-brand"
                   : "border-border text-muted-foreground hover:bg-secondary hover:text-foreground"
               }`}
             >
@@ -69,7 +69,7 @@ function ProduitsPage() {
           {liste.map((p) => (
             <article
               key={p.id}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-[var(--shadow-card)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-card"
             >
               <div className="aspect-[4/3] overflow-hidden bg-secondary">
                 <img

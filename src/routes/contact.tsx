@@ -61,7 +61,7 @@ function ContactPage() {
             ))}
           </div>
 
-          <div className="rounded-2xl border border-border bg-[var(--gradient-deep)] p-8 sm:p-10">
+          <div className="rounded-2xl border border-border bg-deep p-8 sm:p-10">
             <h2 className="font-display text-xl font-bold text-foreground">Demande de devis</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               Le bouton ci-dessous ouvre votre messagerie avec un e-mail déjà préparé : il vous
@@ -69,7 +69,7 @@ function ContactPage() {
             </p>
             <a
               href={devisMailto()}
-              className="mt-7 inline-block rounded-full bg-[var(--gradient-brand)] px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-brand)] transition-transform hover:-translate-y-0.5"
+              className="mt-7 inline-block rounded-full bg-brand px-6 py-3 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
             >
               Préparer ma demande par e-mail
             </a>

@@ -56,7 +56,7 @@ function ServicesPage() {
           </div>
           <a
             href={devisMailto()}
-            className="inline-block w-fit rounded-full bg-[var(--gradient-brand)] px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-brand)] transition-transform hover:-translate-y-0.5"
+            className="inline-block w-fit rounded-full bg-brand px-6 py-3 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
           >
             Demander un devis
           </a>

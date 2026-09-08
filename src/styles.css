@@ -163,3 +163,23 @@
     font-family: var(--font-display);
   }
 }
+
+@utility bg-brand {
+  background-image: var(--gradient-brand);
+}
+
+@utility bg-deep {
+  background-image: var(--gradient-deep);
+}
+
+@utility overlay-hero {
+  background-image: var(--overlay-hero);
+}
+
+@utility shadow-brand {
+  box-shadow: var(--shadow-brand);
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}

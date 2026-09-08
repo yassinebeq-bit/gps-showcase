@@ -57,7 +57,7 @@ function SecteursPage() {
           </p>
           <a
             href={devisMailto()}
-            className="mt-6 inline-block rounded-full bg-[var(--gradient-brand)] px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-brand)] transition-transform hover:-translate-y-0.5"
+            className="mt-6 inline-block rounded-full bg-brand px-6 py-3 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
           >
             Nous exposer votre besoin
           </a>

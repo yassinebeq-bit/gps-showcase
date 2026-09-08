@@ -45,7 +45,7 @@ export function SiteHeader() {
           </a>
           <a
             href={devisMailto()}
-            className="hidden rounded-full bg-[var(--gradient-brand)] px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-brand)] transition-transform hover:-translate-y-0.5 sm:inline-block"
+            className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5 sm:inline-block"
           >
             Demander un devis
           </a>
@@ -76,7 +76,7 @@ export function SiteHeader() {
           ))}
           <a
             href={devisMailto()}
-            className="mt-2 block rounded-lg bg-[var(--gradient-brand)] px-3 py-3 text-center text-sm font-semibold text-primary-foreground"
+            className="mt-2 block rounded-lg bg-brand px-3 py-3 text-center text-sm font-semibold text-primary-foreground"
           >
             Demander un devis
           </a>

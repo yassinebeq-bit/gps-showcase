@@ -1,7 +1,7 @@
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <span className={`flex items-center gap-3 ${className}`}>
-      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[var(--gradient-brand)] shadow-[var(--shadow-brand)]">
+      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand shadow-brand">
         <svg viewBox="0 0 32 32" className="h-6 w-6" aria-hidden="true">
           <path
             d="M16 3.5c4.6 0 8.3 3.6 8.3 8.1 0 5.8-6.4 12.9-7.7 14.3a.8.8 0 0 1-1.2 0C14.1 24.5 7.7 17.4 7.7 11.6 7.7 7.1 11.4 3.5 16 3.5Z"
