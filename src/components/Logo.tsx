@@ -1,4 +1,4 @@
-import gpsLogo from "@/assets/gps-logo-officiel.png.asset.json";
+import gpsLogo from "@/assets/gps-logo-skyblue.png.asset.json";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
