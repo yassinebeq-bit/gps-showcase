@@ -94,18 +94,18 @@ function Index() {
           alt="Imprimante industrielle, scanner et étiquettes dans un environnement de traçabilité"
           width={1600}
           height={900}
-          className="absolute inset-0 h-full w-full object-cover object-center lg:object-[62%_center]"
+          className="absolute inset-0 h-full w-full object-cover object-center lg:object-[70%_center]"
         />
         <div className="absolute inset-0 overlay-hero-v2" />
         <div className="absolute inset-0 hero-grid opacity-25" />
 
         <div className="relative mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8 lg:py-28">
-          <div className="max-w-3xl rounded-[2rem] border border-white/10 bg-background/72 p-6 shadow-2xl backdrop-blur-md sm:p-8 lg:p-10">
+          <div className="max-w-2xl rounded-[2rem] border border-white/10 bg-background/72 p-6 shadow-2xl backdrop-blur-md sm:p-8 lg:max-w-[44rem] lg:p-9 xl:max-w-[41rem]">
             <p className="text-xs font-semibold uppercase tracking-[0.26em] text-accent">
               Solutions d'identification & traçabilité industrielle
             </p>
             <div className="mt-4 h-1 w-28 rounded-full bg-spectrum" />
-            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.02] tracking-tight text-foreground sm:text-5xl lg:text-[4.1rem]">
+            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.02] tracking-tight text-foreground sm:text-5xl lg:text-[3.55rem] xl:text-[3.8rem]">
               Identifiez. Tracez. Optimisez.
               <span className="mt-2 block text-brand-gradient">Faites avancer votre industrie.</span>
             </h1>
