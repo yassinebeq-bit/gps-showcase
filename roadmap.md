@@ -7,3 +7,4 @@
 - [x] Filtres Tous / Zebra / Avery Dennison / POSTEK / NiceLabel
 - [x] Devis par e-mail prérempli (global + par produit)
 - [x] SEO head par page
+- [x] Logo bleu ciel avec « O » multicolore et galerie métier sur l’accueil

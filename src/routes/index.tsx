@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Printer, ScanLine, Cog, Layers } from "lucide-react";
 import hero from "@/assets/hero.jpg";
+import scanLogistique from "@/assets/gps-scan-logistique.png.asset.json";
+import lecteurCodeBarres from "@/assets/gps-lecteur-code-barres.png.asset.json";
+import imprimanteEtiquettes from "@/assets/gps-imprimante-etiquettes.png.asset.json";
 import { Section } from "@/components/Section";
 import { CONTACT, devisMailto, marques, produits, secteurs, services } from "@/data/catalogue";
 
@@ -19,6 +22,8 @@ export const Route = createFileRoute("/")({
         content:
           "Solutions d'étiquetage et de codes-barres pour le textile, la logistique, l'automobile, l'agroalimentaire et le retail.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -81,6 +86,67 @@ function Index() {
                 {m}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border/60 bg-deep">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+              Solutions en action
+            </p>
+            <div className="mt-3 h-1 w-24 rounded-full bg-spectrum" />
+            <h2 className="mt-4 font-display text-2xl font-extrabold text-foreground sm:text-3xl">
+              De la lecture à l’impression, une chaîne de traçabilité complète
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              Capturez les codes-barres, fiabilisez vos données et imprimez vos étiquettes au plus près de vos opérations.
+            </p>
+          </div>
+
+          <div className="mt-10 grid auto-rows-[12rem] gap-4 sm:auto-rows-[15rem] lg:grid-cols-12 lg:grid-rows-2">
+            <figure className="group relative overflow-hidden rounded-lg lg:col-span-7 lg:row-span-2">
+              <img
+                src={imprimanteEtiquettes.url}
+                alt="Imprimante industrielle d’étiquettes en environnement logistique"
+                loading="lazy"
+                width={1372}
+                height={595}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-background/85 px-5 py-4 backdrop-blur-sm">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Impression industrielle</span>
+              </figcaption>
+            </figure>
+
+            <figure className="group relative overflow-hidden rounded-lg lg:col-span-5">
+              <img
+                src={lecteurCodeBarres.url}
+                alt="Lecture d’un code-barres sur un produit"
+                loading="lazy"
+                width={1297}
+                height={591}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-background/85 px-5 py-4 backdrop-blur-sm">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Lecture &amp; collecte</span>
+              </figcaption>
+            </figure>
+
+            <figure className="group relative overflow-hidden rounded-lg lg:col-span-5">
+              <img
+                src={scanLogistique.url}
+                alt="Terminal mobile scannant l’étiquette code-barres d’un colis"
+                loading="lazy"
+                width={880}
+                height={584}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-background/85 px-5 py-4 backdrop-blur-sm">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Mobilité logistique</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
