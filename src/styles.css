@@ -99,6 +99,19 @@
   --sidebar-border: oklch(1 0 0 / 12%);
   --sidebar-ring: oklch(0.72 0.13 205);
 
+  /* Couleurs du "O" du logo GPS */
+  --o-red: oklch(0.62 0.23 27);
+  --o-orange: oklch(0.75 0.17 62);
+  --o-green: oklch(0.72 0.19 145);
+  --o-cyan: oklch(0.78 0.14 205);
+
+  --gradient-spectrum: linear-gradient(
+    90deg,
+    var(--o-red) 0%,
+    var(--o-orange) 33%,
+    var(--o-green) 66%,
+    var(--o-cyan) 100%
+  );
   --gradient-brand: linear-gradient(135deg, oklch(0.72 0.13 205), oklch(0.8 0.14 190));
   --gradient-deep: linear-gradient(160deg, oklch(0.2 0.035 258), oklch(0.16 0.03 262));
   --overlay-hero: linear-gradient(
