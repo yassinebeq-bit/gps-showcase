@@ -13,6 +13,7 @@ export function PageHero({
     <section className="border-b border-border/60 bg-deep">
       <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">{eyebrow}</p>
+        <div className="mt-3 h-1 w-24 rounded-full bg-spectrum" />
         <h1 className="mt-4 max-w-3xl font-display text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
           {titre}
         </h1>

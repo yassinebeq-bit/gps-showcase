@@ -181,6 +181,10 @@
   background-image: var(--gradient-brand);
 }
 
+@utility bg-spectrum {
+  background-image: var(--gradient-spectrum);
+}
+
 @utility bg-deep {
   background-image: var(--gradient-deep);
 }
