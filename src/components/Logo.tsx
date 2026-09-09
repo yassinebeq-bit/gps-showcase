@@ -5,8 +5,8 @@ export function Logo({ className = "" }: { className?: string }) {
     <img
       src={gpsLogo.url}
       alt="Global Performance Services"
-      width="2048"
-      height="715"
+      width="1480"
+      height="463"
       className={`h-auto w-full max-w-[13rem] object-contain sm:max-w-[16rem] ${className}`}
     />
   );

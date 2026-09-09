@@ -49,6 +49,7 @@ function Index() {
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
             Casablanca — Maroc
           </p>
+          <div className="mt-4 h-1 w-28 rounded-full bg-spectrum" />
           <h1 className="mt-5 max-w-4xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             Identification, codes-barres et traçabilité industrielle
           </h1>
@@ -86,9 +87,11 @@ function Index() {
 
       <Section>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {piliers.map(({ icone: Icone, titre, texte }) => (
+          {piliers.map(({ icone: Icone, titre, texte }, i) => (
             <article key={titre} className="rounded-2xl border border-border bg-card p-7">
-              <Icone className="h-6 w-6 text-accent" />
+              <Icone
+                className={`h-6 w-6 ${["text-o-red", "text-o-orange", "text-o-green", "text-o-cyan"][i % 4]}`}
+              />
               <h2 className="mt-5 font-display text-base font-bold text-foreground">{titre}</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{texte}</p>
             </article>

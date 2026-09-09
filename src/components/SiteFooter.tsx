@@ -6,6 +6,7 @@ import { CONTACT } from "@/data/catalogue";
 export function SiteFooter() {
   return (
     <footer className="border-t border-border/60 bg-secondary/40">
+      <div className="h-1 w-full bg-spectrum" />
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-3 lg:px-8">
         <div>
           <Logo className="max-w-[18rem]" />

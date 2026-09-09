@@ -38,7 +38,9 @@ function SecteursPage() {
               key={s.titre}
               className="rounded-2xl border border-border bg-card p-7 transition-colors hover:border-accent/50"
             >
-              <span className="font-display text-sm font-bold text-accent">
+              <span
+                className={`font-display text-sm font-bold ${["text-o-red", "text-o-orange", "text-o-green", "text-o-cyan"][i % 4]}`}
+              >
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h2 className="mt-3 font-display text-lg font-bold text-foreground">{s.titre}</h2>
