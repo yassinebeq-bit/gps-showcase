@@ -185,6 +185,22 @@
   background-image: var(--gradient-spectrum);
 }
 
+@utility text-o-red {
+  color: var(--o-red);
+}
+
+@utility text-o-orange {
+  color: var(--o-orange);
+}
+
+@utility text-o-green {
+  color: var(--o-green);
+}
+
+@utility text-o-cyan {
+  color: var(--o-cyan);
+}
+
 @utility bg-deep {
   background-image: var(--gradient-deep);
 }
