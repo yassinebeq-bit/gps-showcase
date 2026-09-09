@@ -1,26 +1,40 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Printer, ScanLine, Cog, Layers } from "lucide-react";
-import hero from "@/assets/hero.jpg";
-import scanLogistique from "@/assets/gps-scan-logistique.png.asset.json";
-import lecteurCodeBarres from "@/assets/gps-lecteur-code-barres.png.asset.json";
-import imprimanteEtiquettes from "@/assets/gps-imprimante-etiquettes.png.asset.json";
+import {
+  ArrowRight,
+  Boxes,
+  Cog,
+  Headphones,
+  Layers,
+  MapPin,
+  PackageCheck,
+  Phone,
+  Printer,
+  ScanLine,
+  ShieldCheck,
+  Tags,
+  Wrench,
+} from "lucide-react";
+import hero from "@/assets/hero-gps-enhanced.jpg";
+import scanLogistique from "@/assets/solution-mobile.jpg";
+import lecteurCodeBarres from "@/assets/solution-scanner.jpg";
+import imprimanteEtiquettes from "@/assets/solution-printer.jpg";
 import { Section } from "@/components/Section";
 import { CONTACT, devisMailto, marques, produits, secteurs, services } from "@/data/catalogue";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "GPS — Identification, codes-barres et traçabilité | Casablanca" },
+      { title: "GPS — Solutions d'identification & traçabilité industrielle | Casablanca" },
       {
         name: "description",
         content:
-          "Global Performance Services fournit imprimantes d'étiquettes, terminaux, consommables et logiciels Zebra, Avery Dennison, POSTEK et NiceLabel au Maroc.",
+          "Global Performance Services accompagne les industriels au Maroc avec des imprimantes d'étiquettes, terminaux, lecteurs, consommables, pièces, logiciels et services techniques.",
       },
-      { property: "og:title", content: "Global Performance Services — Identification & traçabilité" },
+      { property: "og:title", content: "Global Performance Services — Identification & traçabilité industrielle" },
       {
         property: "og:description",
         content:
-          "Solutions d'étiquetage et de codes-barres pour le textile, la logistique, l'automobile, l'agroalimentaire et le retail.",
+          "Imprimantes, étiquettes, rubans, pièces de rechange, lecteurs, terminaux, logiciels et accompagnement technique pour l'industrie au Maroc.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,11 +43,44 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const piliers = [
-  { icone: Printer, titre: "Impression d'étiquettes", texte: "Imprimantes industrielles, de bureau, mobiles et textiles." },
-  { icone: ScanLine, titre: "Lecture & collecte", texte: "Terminaux durcis et lecteurs de codes-barres 1D / 2D." },
-  { icone: Cog, titre: "Étiquetage automatique", texte: "Systèmes d'impression-pose intégrés à vos lignes." },
-  { icone: Layers, titre: "Consommables & logiciels", texte: "Étiquettes, rubans et gestion centralisée de l'étiquetage." },
+const familles = [
+  {
+    icone: Printer,
+    titre: "Imprimantes industrielles",
+    texte: "Impression d'étiquettes fiable pour production, logistique, retail et textile.",
+  },
+  {
+    icone: Tags,
+    titre: "Étiquettes & rubans",
+    texte: "Étiquettes adhésives, supports spéciaux et rubans transfert thermique adaptés à l'application.",
+  },
+  {
+    icone: ScanLine,
+    titre: "Lecteurs & terminaux",
+    texte: "Capture 1D/2D, mobilité et collecte de données pour vos opérations terrain.",
+  },
+  {
+    icone: Wrench,
+    titre: "Pièces & maintenance",
+    texte: "Pièces de rechange, diagnostic, réparation, programmation et maintenance de vos équipements.",
+  },
+  {
+    icone: Cog,
+    titre: "Automatisation",
+    texte: "Systèmes d'impression-pose et intégration sur lignes et postes industriels.",
+  },
+  {
+    icone: Layers,
+    titre: "Logiciels d'étiquetage",
+    texte: "Conception, données variables et gestion centralisée avec intégration à vos systèmes.",
+  },
+];
+
+const preuves = [
+  { icone: Headphones, titre: "Support technique", texte: "Conseil, installation et accompagnement" },
+  { icone: MapPin, titre: "Basés à Casablanca", texte: "Au service des industriels au Maroc" },
+  { icone: Boxes, titre: "Offre multi-solutions", texte: "Matériel, consommables, pièces et logiciels" },
+  { icone: ShieldCheck, titre: "Approche terrain", texte: "Solutions dimensionnées selon votre application" },
 ];
 
 function Index() {
@@ -41,48 +88,75 @@ function Index() {
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-border/60">
+      <section className="relative isolate overflow-hidden border-b border-border/60">
         <img
           src={hero}
-          alt="Entrepôt industriel avec palettes identifiées"
+          alt="Imprimante industrielle, scanner et étiquettes dans un environnement de traçabilité"
           width={1600}
-          height={1008}
-          className="absolute inset-0 h-full w-full object-cover"
+          height={900}
+          className="absolute inset-0 h-full w-full object-cover object-center lg:object-[62%_center]"
         />
-        <div className="absolute inset-0 overlay-hero" />
-        <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-36">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
-            Casablanca — Maroc
-          </p>
-          <div className="mt-4 h-1 w-28 rounded-full bg-spectrum" />
-          <h1 className="mt-5 max-w-4xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Identification, codes-barres et traçabilité industrielle
-          </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Global Performance Services équipe les industriels et les distributeurs en solutions
-            d'étiquetage fiables : matériel, consommables, logiciels et accompagnement technique.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <Link
-              to="/produits"
-              className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
-            >
-              Découvrir le catalogue <ArrowRight className="h-4 w-4" />
-            </Link>
-            <a
-              href={devisMailto()}
-              className="rounded-full border border-border bg-background/60 px-6 py-3.5 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-secondary"
-            >
-              Demander un devis
-            </a>
+        <div className="absolute inset-0 overlay-hero-v2" />
+        <div className="absolute inset-0 hero-grid opacity-25" />
+
+        <div className="relative mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8 lg:py-28">
+          <div className="max-w-3xl rounded-[2rem] border border-white/10 bg-background/72 p-6 shadow-2xl backdrop-blur-md sm:p-8 lg:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.26em] text-accent">
+              Solutions d'identification & traçabilité industrielle
+            </p>
+            <div className="mt-4 h-1 w-28 rounded-full bg-spectrum" />
+            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.02] tracking-tight text-foreground sm:text-5xl lg:text-[4.1rem]">
+              Identifiez. Tracez. Optimisez.
+              <span className="mt-2 block text-brand-gradient">Faites avancer votre industrie.</span>
+            </h1>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Imprimantes, étiquettes, rubans, pièces de rechange, lecteurs, terminaux, logiciels et
+              service technique : GPS construit une solution complète autour de vos flux et de vos équipements.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={devisMailto()}
+                className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
+              >
+                Demander un devis <ArrowRight className="h-4 w-4" />
+              </a>
+              <Link
+                to="/produits"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/75 px-6 py-3.5 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-secondary"
+              >
+                Découvrir nos solutions
+              </Link>
+              <a
+                href={CONTACT.telHref}
+                className="inline-flex items-center gap-2 rounded-full px-2 py-3.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <Phone className="h-4 w-4 text-accent" /> {CONTACT.tel}
+              </a>
+            </div>
+
+            <div className="mt-8 grid gap-3 border-t border-border/60 pt-6 sm:grid-cols-3">
+              <div className="flex items-start gap-3">
+                <PackageCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+                <div><p className="text-sm font-semibold text-foreground">Solutions complètes</p><p className="text-xs text-muted-foreground">Du consommable au matériel</p></div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Wrench className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+                <div><p className="text-sm font-semibold text-foreground">Service technique</p><p className="text-xs text-muted-foreground">Installation, maintenance, réparation</p></div>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+                <div><p className="text-sm font-semibold text-foreground">Casablanca, Maroc</p><p className="text-xs text-muted-foreground">Accompagnement B2B de proximité</p></div>
+              </div>
+            </div>
           </div>
 
-          <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-border/60 pt-8">
-            <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              Marques distribuées
+          <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4 rounded-2xl border border-white/10 bg-background/60 px-5 py-4 backdrop-blur-md">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+              Marques & technologies proposées
             </span>
             {marques.map((m) => (
-              <span key={m} className="font-display text-sm font-bold tracking-wide text-foreground">
+              <span key={m} className="font-display text-sm font-bold tracking-wide text-foreground/90">
                 {m}
               </span>
             ))}
@@ -91,59 +165,89 @@ function Index() {
       </section>
 
       <section className="border-b border-border/60 bg-deep">
-        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
-              Solutions en action
-            </p>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">Vos besoins, nos solutions</p>
             <div className="mt-3 h-1 w-24 rounded-full bg-spectrum" />
             <h2 className="mt-4 font-display text-2xl font-extrabold text-foreground sm:text-3xl">
-              De la lecture à l’impression, une chaîne de traçabilité complète
+              Une seule équipe pour équiper, identifier, tracer et maintenir
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Capturez les codes-barres, fiabilisez vos données et imprimez vos étiquettes au plus près de vos opérations.
+              Nous ne nous limitons pas à la vente d'une imprimante : nous travaillons sur l'ensemble de la chaîne,
+              du support imprimé à la collecte des données et au maintien en condition opérationnelle.
             </p>
           </div>
 
-          <div className="mt-10 grid auto-rows-[12rem] gap-4 sm:auto-rows-[15rem] lg:grid-cols-12 lg:grid-rows-2">
-            <figure className="group relative overflow-hidden rounded-lg lg:col-span-7 lg:row-span-2">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {familles.map(({ icone: Icone, titre, texte }) => (
+              <article key={titre} className="group rounded-2xl border border-border bg-card/80 p-6 transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-card">
+                <div className="grid h-11 w-11 place-items-center rounded-xl border border-accent/20 bg-accent/10">
+                  <Icone className="h-5 w-5 text-accent" />
+                </div>
+                <h3 className="mt-5 font-display text-lg font-bold text-foreground">{titre}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{texte}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border/60 bg-background">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">Solutions en action</p>
+            <div className="mt-3 h-1 w-24 rounded-full bg-spectrum" />
+            <h2 className="mt-4 font-display text-2xl font-extrabold text-foreground sm:text-3xl">
+              De l'impression à la lecture, une chaîne de traçabilité complète
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              Des équipements pensés pour les ateliers, entrepôts, points de vente et environnements de production.
+            </p>
+          </div>
+
+          <div className="mt-10 grid auto-rows-[13rem] gap-4 sm:auto-rows-[16rem] lg:grid-cols-12 lg:grid-rows-2">
+            <figure className="group relative overflow-hidden rounded-2xl border border-border lg:col-span-7 lg:row-span-2">
               <img
-                src={imprimanteEtiquettes.url}
+                src={imprimanteEtiquettes}
                 alt="Imprimante industrielle d’étiquettes en environnement logistique"
                 loading="lazy"
                 width={1372}
                 height={595}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-background/85 px-5 py-4 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-transparent to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Impression industrielle</span>
+                <p className="mt-2 max-w-md font-display text-lg font-bold text-foreground">Étiquettes lisibles, fiables et prêtes pour vos flux de production.</p>
               </figcaption>
             </figure>
 
-            <figure className="group relative overflow-hidden rounded-lg lg:col-span-5">
+            <figure className="group relative overflow-hidden rounded-2xl border border-border lg:col-span-5">
               <img
-                src={lecteurCodeBarres.url}
+                src={lecteurCodeBarres}
                 alt="Lecture d’un code-barres sur un produit"
                 loading="lazy"
                 width={1297}
                 height={591}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-background/85 px-5 py-4 backdrop-blur-sm">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Lecture &amp; collecte</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-5">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Lecture & collecte</span>
               </figcaption>
             </figure>
 
-            <figure className="group relative overflow-hidden rounded-lg lg:col-span-5">
+            <figure className="group relative overflow-hidden rounded-2xl border border-border lg:col-span-5">
               <img
-                src={scanLogistique.url}
+                src={scanLogistique}
                 alt="Terminal mobile scannant l’étiquette code-barres d’un colis"
                 loading="lazy"
                 width={880}
                 height={584}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-background/85 px-5 py-4 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-5">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Mobilité logistique</span>
               </figcaption>
             </figure>
@@ -151,63 +255,43 @@ function Index() {
         </div>
       </section>
 
-      <Section>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {piliers.map(({ icone: Icone, titre, texte }, i) => (
-            <article key={titre} className="rounded-2xl border border-border bg-card p-7">
-              <Icone
-                className={`h-6 w-6 ${["text-o-red", "text-o-orange", "text-o-green", "text-o-cyan"][i % 4]}`}
-              />
-              <h2 className="mt-5 font-display text-base font-bold text-foreground">{titre}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{texte}</p>
-            </article>
-          ))}
+      <section className="border-b border-border/60 bg-secondary/25">
+        <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-14">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {preuves.map(({ icone: Icone, titre, texte }) => (
+              <div key={titre} className="flex gap-4 rounded-2xl border border-border bg-card/50 p-5">
+                <Icone className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+                <div><p className="font-display text-sm font-bold text-foreground">{titre}</p><p className="mt-1 text-xs leading-relaxed text-muted-foreground">{texte}</p></div>
+              </div>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
       <section className="border-y border-border/60 bg-secondary/40">
         <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
           <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
-                Catalogue
-              </p>
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">Catalogue</p>
               <h2 className="mt-4 font-display text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
-                Une sélection de références industrielles
+                Des références pour les environnements industriels exigeants
               </h2>
             </div>
-            <Link
-              to="/produits"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-accent"
-            >
+            <Link to="/produits" className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-accent">
               Voir tout le catalogue <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {vedettes.map((p) => (
-              <article
-                key={p.id}
-                className="group overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-card"
-              >
+              <article key={p.id} className="group overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-card">
                 <div className="aspect-[4/3] overflow-hidden bg-secondary">
-                  <img
-                    src={p.image}
-                    alt={`${p.marque} ${p.modele}`}
-                    loading="lazy"
-                    width={1024}
-                    height={768}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  <img src={p.image} alt={`${p.marque} ${p.modele}`} loading="lazy" width={1024} height={768} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="p-6">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
-                    {p.marque}
-                  </span>
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">{p.marque}</span>
                   <h3 className="mt-2 font-display text-lg font-bold text-foreground">{p.modele}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {p.description}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
                 </div>
               </article>
             ))}
@@ -220,22 +304,14 @@ function Index() {
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">Secteurs</p>
             <h2 className="mt-4 font-display text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
-              Nous accompagnons les industriels et les distributeurs
+              Des solutions adaptées à vos contraintes métier
             </h2>
             <ul className="mt-7 flex flex-wrap gap-2">
               {secteurs.map((s) => (
-                <li
-                  key={s.titre}
-                  className="rounded-full border border-border px-4 py-2 text-sm text-muted-foreground"
-                >
-                  {s.titre}
-                </li>
+                <li key={s.titre} className="rounded-full border border-border px-4 py-2 text-sm text-muted-foreground">{s.titre}</li>
               ))}
             </ul>
-            <Link
-              to="/secteurs"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-accent"
-            >
+            <Link to="/secteurs" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-accent">
               Détail par secteur <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -253,10 +329,7 @@ function Index() {
                 </li>
               ))}
             </ul>
-            <Link
-              to="/services"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-accent"
-            >
+            <Link to="/services" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-accent">
               Tous nos services <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -266,20 +339,22 @@ function Index() {
       <section className="border-t border-border/60 bg-deep">
         <div className="mx-auto grid max-w-7xl gap-6 px-5 py-16 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:px-8 lg:py-20">
           <div>
-            <h2 className="font-display text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
-              Un projet d'étiquetage à équiper ou à moderniser ?
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">Parlons de votre application</p>
+            <h2 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+              Besoin d'équiper, fiabiliser ou moderniser votre identification ?
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Écrivez-nous à {CONTACT.email} ou appelez le {CONTACT.tel}. Nous étudions votre
-              application et vous proposons la configuration adaptée.
+              Décrivez-nous votre produit, votre support, votre cadence et votre environnement. Nous vous orientons vers la configuration la plus adaptée.
             </p>
           </div>
-          <a
-            href={devisMailto()}
-            className="inline-block w-fit rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
-          >
-            Demander un devis
-          </a>
+          <div className="flex flex-wrap gap-3 lg:justify-end">
+            <a href={devisMailto()} className="inline-flex w-fit items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5">
+              Demander un devis <ArrowRight className="h-4 w-4" />
+            </a>
+            <a href={CONTACT.telHref} className="inline-flex w-fit items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-semibold text-foreground hover:bg-secondary">
+              <Phone className="h-4 w-4 text-accent" /> Nous appeler
+            </a>
+          </div>
         </div>
       </section>
     </>

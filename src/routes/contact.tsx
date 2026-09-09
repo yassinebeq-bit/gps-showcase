@@ -24,7 +24,7 @@ export const Route = createFileRoute("/contact")({
 
 const coordonnees = [
   { icone: MapPin, label: "Adresse", valeur: CONTACT.adresse, href: undefined },
-  { icone: Phone, label: "Téléphone / Fax", valeur: CONTACT.tel, href: CONTACT.telHref },
+  { icone: Phone, label: "Téléphone", valeur: CONTACT.tel, href: CONTACT.telHref },
   { icone: Mail, label: "E-mail", valeur: CONTACT.email, href: `mailto:${CONTACT.email}` },
   { icone: Globe, label: "Site web", valeur: CONTACT.site, href: CONTACT.siteHref },
 ];

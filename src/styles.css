@@ -216,3 +216,23 @@
 @utility shadow-card {
   box-shadow: var(--shadow-card);
 }
+
+@utility overlay-hero-v2 {
+  background-image:
+    linear-gradient(90deg, oklch(0.12 0.032 258 / 0.96) 0%, oklch(0.12 0.032 258 / 0.86) 42%, oklch(0.12 0.032 258 / 0.48) 72%, oklch(0.12 0.032 258 / 0.22) 100%),
+    linear-gradient(180deg, oklch(0.11 0.03 258 / 0.12) 0%, oklch(0.11 0.03 258 / 0.4) 100%);
+}
+
+@utility hero-grid {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@utility text-brand-gradient {
+  background-image: linear-gradient(90deg, oklch(0.92 0.02 210), oklch(0.82 0.16 205), oklch(0.78 0.14 190));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

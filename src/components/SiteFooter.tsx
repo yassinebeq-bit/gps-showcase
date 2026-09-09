@@ -11,8 +11,7 @@ export function SiteFooter() {
         <div>
           <Logo className="max-w-[18rem]" />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Solutions d'identification, de codes-barres et de traçabilité pour l'industrie et la
-            distribution au Maroc.
+            Solutions d'identification industrielle : impression, étiquetage, lecture, consommables, pièces, logiciels et accompagnement technique au Maroc.
           </p>
         </div>
 
@@ -53,7 +52,12 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border/60 px-5 py-6 text-center text-xs text-muted-foreground lg:px-8">
-        © {new Date().getFullYear()} Global Performance Services — Tous droits réservés.
+        <p>© {new Date().getFullYear()} Global Performance Services — Tous droits réservés.</p>
+        <p className="mx-auto mt-2 max-w-4xl leading-relaxed">
+          Les marques citées appartiennent à leurs propriétaires respectifs. Leur mention sert uniquement à identifier
+          les produits, technologies et solutions proposés ou pris en charge par GPS et ne constitue pas, à elle seule,
+          une déclaration de partenariat ou d'agrément officiel.
+        </p>
       </div>
     </footer>
   );

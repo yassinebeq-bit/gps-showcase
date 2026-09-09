@@ -1,13 +1,13 @@
-import gpsLogo from "@/assets/gps-logo-skyblue.png.asset.json";
+import gpsLogo from "@/assets/gps-logo-local.png";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <img
-      src={gpsLogo.url}
+      src={gpsLogo}
       alt="Global Performance Services"
-      width="1480"
-      height="463"
-      className={`h-auto w-full max-w-[13rem] object-contain sm:max-w-[16rem] ${className}`}
+      width="2048"
+      height="672"
+      className={`h-auto w-full max-w-[12rem] object-contain sm:max-w-[15rem] ${className}`}
     />
   );
 }
