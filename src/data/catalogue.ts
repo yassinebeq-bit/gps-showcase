@@ -16,6 +16,8 @@ export type Produit = {
   description: string;
   points: string[];
   image: string;
+  ficheUrl?: string;
+  specs?: { label: string; valeur: string }[];
 };
 
 export const marques: Marque[] = ["Zebra", "Avery Dennison", "POSTEK", "NiceLabel"];
@@ -30,6 +32,13 @@ export const produits: Produit[] = [
       "Imprimante industrielle haut de gamme pour les environnements de production exigeants et les volumes d'étiquettes élevés.",
     points: ["Résolutions 203 / 300 / 600 dpi", "Écran couleur tactile", "Châssis métallique intensif"],
     image: printer,
+    ficheUrl: "https://www.zebra.com/gb/en/products/printers/industrial/zt600-series/zt610.html",
+    specs: [
+      { label: "Technologie", valeur: "Thermique direct / transfert thermique" },
+      { label: "Largeur d’impression", valeur: "jusqu’à 104 mm" },
+      { label: "Vitesse max.", valeur: "356 mm/s" },
+      { label: "Résolution", valeur: "203 / 300 / 600 dpi" },
+    ],
   },
   {
     id: "zebra-zt411",
@@ -40,6 +49,13 @@ export const produits: Produit[] = [
       "Imprimante industrielle 4 pouces pour l'étiquetage de cartons, palettes et pièces en atelier ou en entrepôt.",
     points: ["Résolutions 203 / 300 / 600 dpi", "Écran tactile couleur", "Connectivité filaire et sans fil"],
     image: printer,
+    ficheUrl: "https://www.zebra.com/us/en/products/printers/industrial/zt400-series/zt411.html",
+    specs: [
+      { label: "Technologie", valeur: "Thermique direct / transfert thermique" },
+      { label: "Largeur d’impression", valeur: "jusqu’à 104 mm" },
+      { label: "Vitesse max.", valeur: "356 mm/s" },
+      { label: "Résolution", valeur: "203 / 300 / 600 dpi" },
+    ],
   },
   {
     id: "zebra-zq521",
