@@ -15,8 +15,6 @@ import {
   Wrench,
 } from "lucide-react";
 import hero from "@/assets/hero-gps-enhanced.jpg";
-import scanLogistique from "@/assets/solution-mobile.jpg";
-import lecteurCodeBarres from "@/assets/solution-scanner.jpg";
 import imprimanteEtiquettesAsset from "@/assets/gps-solutions-banner.png.asset.json";
 
 const imprimanteEtiquettes = imprimanteEtiquettesAsset.url;
