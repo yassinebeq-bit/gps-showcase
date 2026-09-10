@@ -17,7 +17,9 @@ import {
 import hero from "@/assets/hero-gps-enhanced.jpg";
 import scanLogistique from "@/assets/solution-mobile.jpg";
 import lecteurCodeBarres from "@/assets/solution-scanner.jpg";
-import imprimanteEtiquettes from "@/assets/solution-printer.jpg";
+import imprimanteEtiquettesAsset from "@/assets/gps-solutions-banner.png.asset.json";
+
+const imprimanteEtiquettes = imprimanteEtiquettesAsset.url;
 import { Section } from "@/components/Section";
 import { CONTACT, devisMailto, marques, produits, secteurs, services } from "@/data/catalogue";
 
@@ -253,10 +255,10 @@ function Index() {
             <figure className="group relative overflow-hidden rounded-2xl border border-border lg:col-span-7 lg:row-span-2">
               <img
                 src={imprimanteEtiquettes}
-                alt="Imprimante industrielle d’étiquettes en environnement logistique"
+                alt="Bannière GPS : solutions d’identification, traçabilité et performance pour l’industrie"
                 loading="lazy"
-                width={1372}
-                height={595}
+                width={1774}
+                height={887}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-transparent to-transparent" />
