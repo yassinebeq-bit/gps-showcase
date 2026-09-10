@@ -17,7 +17,9 @@ import {
 import hero from "@/assets/hero-gps-enhanced.jpg";
 import scanLogistique from "@/assets/solution-mobile.jpg";
 import lecteurCodeBarres from "@/assets/solution-scanner.jpg";
-import imprimanteEtiquettes from "@/assets/gps-solutions-banner.png.asset.json";
+import imprimanteEtiquettesAsset from "@/assets/gps-solutions-banner.png.asset.json";
+
+const imprimanteEtiquettes = imprimanteEtiquettesAsset.url;
 import { Section } from "@/components/Section";
 import { CONTACT, devisMailto, marques, produits, secteurs, services } from "@/data/catalogue";
 
