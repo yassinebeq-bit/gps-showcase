@@ -100,7 +100,7 @@ function Index() {
 
         <div className="mt-4 h-1 w-28 rounded-full bg-spectrum" />
 
-        <h1 className="mt-7 font-display text-4xl font-extrabold leading-[1.03] tracking-tight text-foreground sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem]">
+        <h1 className="mt-7 font-display text-4xl font-extrabold leading-[1.03] tracking-tight text-foreground sm:text-5xl lg:text-[2.7rem] xl:text-[3.15rem]
           Identifiez. Tracez. Optimisez.
           <span className="mt-3 block text-brand-gradient">
             Faites avancer votre industrie.
