@@ -89,10 +89,10 @@ function Index() {
   return (
     <>
       <section className="border-b border-border/60 bg-background">
-  <div className="mx-auto grid min-h-[720px] max-w-[1600px] lg:grid-cols-[42%_58%]">
+  <div className="mx-auto grid max-w-[1600px] lg:grid-cols-[42%_58%]">
 
     {/* COLONNE GAUCHE */}
-    <div className="relative z-10 flex items-center bg-background px-6 py-16 sm:px-10 lg:px-12 xl:px-16">
+    <div className="relative z-10 flex items-start bg-background px-6 py-10 sm:px-10 lg:px-12 lg:py-12 xl:px-16">
       <div className="w-full max-w-xl">
         <p className="text-xs font-semibold uppercase tracking-[0.26em] text-accent">
           Solutions d'identification & traçabilité industrielle
@@ -100,7 +100,7 @@ function Index() {
 
         <div className="mt-4 h-1 w-28 rounded-full bg-spectrum" />
 
-        <h1 className="mt-7 font-display text-4xl font-extrabold leading-[1.03] tracking-tight text-foreground sm:text-5xl lg:text-[2.7rem] xl:text-[3.15rem]
+        <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.03] tracking-tight text-foreground sm:text-5xl lg:text-[2.7rem] xl:text-[3.15rem]">
           Identifiez. Tracez. Optimisez.
           <span className="mt-3 block text-brand-gradient">
             Faites avancer votre industrie.
