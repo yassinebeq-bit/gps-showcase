@@ -203,6 +203,8 @@ export const CONTACT = {
   adresse: "4, rue Bangkok, Étage 2, Z.I. Sidi Bernoussi — Casablanca, Maroc",
   tel: "+212 (0)5 22 34 39 80",
   telHref: "tel:+212522343980",
+  mobile: "+212 6 61 26 63 20",
+  mobileHref: "tel:+212661266320",
   email: "contact@gps.co.ma",
   site: "www.gps.co.ma",
   siteHref: "https://www.gps.co.ma",
