@@ -36,13 +36,22 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
-          <a
-            href={CONTACT.telHref}
-            className="hidden items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary xl:inline-flex"
-          >
-            <Phone className="h-4 w-4 text-accent" />
-            {CONTACT.tel}
-          </a>
+          <div className="hidden items-center gap-2 xl:flex">
+            <a
+              href={CONTACT.telHref}
+              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            >
+              <Phone className="h-4 w-4 text-accent" />
+              {CONTACT.tel}
+            </a>
+            <a
+              href={CONTACT.mobileHref}
+              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            >
+              <Phone className="h-4 w-4 text-accent" />
+              {CONTACT.mobile}
+            </a>
+          </div>
           <a
             href={devisMailto()}
             className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5 sm:inline-block"

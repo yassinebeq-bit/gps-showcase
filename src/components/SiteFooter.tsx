@@ -38,7 +38,11 @@ export function SiteFooter() {
             </li>
             <li className="flex gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <a href={CONTACT.telHref} className="hover:text-foreground">{CONTACT.tel}</a>
+              <span>
+                <a href={CONTACT.telHref} className="hover:text-foreground">{CONTACT.tel}</a>
+                <span className="mx-2 text-border">/</span>
+                <a href={CONTACT.mobileHref} className="hover:text-foreground">{CONTACT.mobile}</a>
+              </span>
             </li>
             <li className="flex gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
