@@ -171,11 +171,11 @@ function Index() {
     </div>
 
     {/* COLONNE DROITE : IMAGE */}
-    <div className="relative min-h-[480px] overflow-hidden lg:min-h-[720px]">
+    <div className="relative min-h-[480px] overflow-hidden bg-[#07111f] lg:min-h-[680px]">
       <img
         src={hero}
         alt="Solution industrielle GPS avec imprimante, étiquettes et traçabilité"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full object-contain object-center"
       />
 
       <div className="absolute inset-0 bg-gradient-to-r from-background/30 via-transparent to-transparent" />
