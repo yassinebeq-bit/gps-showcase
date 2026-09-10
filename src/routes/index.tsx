@@ -171,7 +171,7 @@ function Index() {
     </div>
 
     {/* COLONNE DROITE : IMAGE */}
-    <div className="relative min-h-[480px] overflow-hidden bg-[#07111f] lg:min-h-[680px] lg:-mt-16">
+    <div className="relative min-h-[480px] overflow-hidden bg-[#07111f] lg:min-h-[680px] lg:-mt-28">
       <img
         src={hero}
         alt="Solution industrielle GPS avec imprimante, étiquettes et traçabilité"
