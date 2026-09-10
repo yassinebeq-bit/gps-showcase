@@ -242,60 +242,28 @@ function Index() {
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">Solutions en action</p>
             <div className="mt-3 h-1 w-24 rounded-full bg-spectrum" />
             <h2 className="mt-4 font-display text-2xl font-extrabold text-foreground sm:text-3xl">
-              De l'impression à la lecture, une chaîne de traçabilité complète
+              Identification, traçabilité et performance pour votre industrie
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Des équipements pensés pour les ateliers, entrepôts, points de vente et environnements de production.
+              Une chaîne complète allant de l'impression d'étiquettes à la lecture et à la mobilité logistique.
             </p>
           </div>
 
-          <div className="mt-10 grid auto-rows-[13rem] gap-4 sm:auto-rows-[16rem] lg:grid-cols-12 lg:grid-rows-2">
-            <figure className="group relative overflow-hidden rounded-2xl border border-border lg:col-span-7 lg:row-span-2">
-              <img
-                src={imprimanteEtiquettes}
-                alt="Bannière GPS : solutions d’identification, traçabilité et performance pour l’industrie"
-                loading="lazy"
-                width={1774}
-                height={887}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-transparent to-transparent" />
-              <figcaption className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Impression industrielle</span>
-                <p className="mt-2 max-w-md font-display text-lg font-bold text-foreground">Étiquettes lisibles, fiables et prêtes pour vos flux de production.</p>
-              </figcaption>
-            </figure>
-
-            <figure className="group relative overflow-hidden rounded-2xl border border-border lg:col-span-5">
-              <img
-                src={lecteurCodeBarres}
-                alt="Lecture d’un code-barres sur un produit"
-                loading="lazy"
-                width={1297}
-                height={591}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
-              <figcaption className="absolute inset-x-0 bottom-0 p-5">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Lecture & collecte</span>
-              </figcaption>
-            </figure>
-
-            <figure className="group relative overflow-hidden rounded-2xl border border-border lg:col-span-5">
-              <img
-                src={scanLogistique}
-                alt="Terminal mobile scannant l’étiquette code-barres d’un colis"
-                loading="lazy"
-                width={880}
-                height={584}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
-              <figcaption className="absolute inset-x-0 bottom-0 p-5">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Mobilité logistique</span>
-              </figcaption>
-            </figure>
-          </div>
+          <figure className="group relative mt-10 overflow-hidden rounded-2xl border border-border">
+            <img
+              src={imprimanteEtiquettes}
+              alt="Bannière GPS : solutions d’identification, traçabilité et performance pour l’industrie"
+              loading="lazy"
+              width={1774}
+              height={887}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-transparent to-transparent" />
+            <figcaption className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Impression • Lecture • Mobilité</span>
+              <p className="mt-2 max-w-md font-display text-lg font-bold text-foreground">Des équipements pensés pour les ateliers, entrepôts et points de vente.</p>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
