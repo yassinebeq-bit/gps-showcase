@@ -88,81 +88,125 @@ function Index() {
 
   return (
     <>
-      <section className="relative isolate overflow-hidden border-b border-border/60">
-        <img
-          src={hero}
-          alt="Imprimante industrielle, scanner et étiquettes dans un environnement de traçabilité"
-          width={1600}
-          height={900}
-          className="absolute inset-0 h-full w-full object-cover object-[76%_center] lg:object-[80%_center] xl:object-[84%_center]"
-        />
-        <div className="absolute inset-0 overlay-hero-v2" />
-        <div className="absolute inset-0 hero-grid opacity-25" />
+      <section className="border-b border-border/60 bg-background">
+  <div className="mx-auto grid min-h-[720px] max-w-[1600px] lg:grid-cols-[42%_58%]">
 
-        <div className="relative mx-auto max-w-7xl px-5 py-16 sm:py-20 lg:px-8 lg:py-28">
-         <div className="max-w-xl rounded-[2rem] border border-white/10 bg-background/82 p-6 shadow-2xl backdrop-blur-md sm:p-8 lg:w-[42%] lg:max-w-[560px] lg:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.26em] text-accent">
-              Solutions d'identification & traçabilité industrielle
-            </p>
-            <div className="mt-4 h-1 w-28 rounded-full bg-spectrum" />
-            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.03] tracking-tight text-foreground sm:text-5xl lg:text-[3.1rem] xl:text-[3.35rem]">
-              Identifiez. Tracez. Optimisez.
-              <span className="mt-2 block text-brand-gradient">Faites avancer votre industrie.</span>
-            </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Imprimantes, étiquettes, rubans, pièces de rechange, lecteurs, terminaux, logiciels et
-              service technique : GPS construit une solution complète autour de vos flux et de vos équipements.
-            </p>
+    {/* COLONNE GAUCHE */}
+    <div className="relative z-10 flex items-center bg-background px-6 py-16 sm:px-10 lg:px-12 xl:px-16">
+      <div className="w-full max-w-xl">
+        <p className="text-xs font-semibold uppercase tracking-[0.26em] text-accent">
+          Solutions d'identification & traçabilité industrielle
+        </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={devisMailto()}
-                className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
-              >
-                Demander un devis <ArrowRight className="h-4 w-4" />
-              </a>
-              <Link
-                to="/produits"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/75 px-6 py-3.5 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-secondary"
-              >
-                Découvrir nos solutions
-              </Link>
-              <a
-                href={CONTACT.telHref}
-                className="inline-flex items-center gap-2 rounded-full px-2 py-3.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <Phone className="h-4 w-4 text-accent" /> {CONTACT.tel}
-              </a>
-            </div>
+        <div className="mt-4 h-1 w-28 rounded-full bg-spectrum" />
 
-            <div className="mt-8 grid gap-3 border-t border-border/60 pt-6 sm:grid-cols-3">
-              <div className="flex items-start gap-3">
-                <PackageCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                <div><p className="text-sm font-semibold text-foreground">Solutions complètes</p><p className="text-xs text-muted-foreground">Du consommable au matériel</p></div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Wrench className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                <div><p className="text-sm font-semibold text-foreground">Service technique</p><p className="text-xs text-muted-foreground">Installation, maintenance, réparation</p></div>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                <div><p className="text-sm font-semibold text-foreground">Casablanca, Maroc</p><p className="text-xs text-muted-foreground">Accompagnement B2B de proximité</p></div>
-              </div>
+        <h1 className="mt-7 font-display text-4xl font-extrabold leading-[1.03] tracking-tight text-foreground sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem]">
+          Identifiez. Tracez. Optimisez.
+          <span className="mt-3 block text-brand-gradient">
+            Faites avancer votre industrie.
+          </span>
+        </h1>
+
+        <p className="mt-7 text-base leading-relaxed text-muted-foreground sm:text-lg">
+          Imprimantes, étiquettes, rubans, pièces de rechange, lecteurs,
+          terminaux, logiciels et service technique : GPS construit une
+          solution complète autour de vos flux et de vos équipements.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href={devisMailto()}
+            className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
+          >
+            Demander un devis
+            <ArrowRight className="h-4 w-4" />
+          </a>
+
+          <Link
+            to="/produits"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+          >
+            Découvrir nos solutions
+          </Link>
+        </div>
+
+        <div className="mt-9 grid gap-4 border-t border-border/60 pt-6 sm:grid-cols-3">
+          <div className="flex items-start gap-3">
+            <PackageCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+            <div>
+              <p className="text-sm font-semibold text-foreground">
+                Solutions complètes
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Du consommable au matériel
+              </p>
             </div>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4 rounded-2xl border border-white/10 bg-background/60 px-5 py-4 backdrop-blur-md">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-              Marques & technologies proposées
-            </span>
-            {marques.map((m) => (
-              <span key={m} className="font-display text-sm font-bold tracking-wide text-foreground/90">
-                {m}
-              </span>
-            ))}
+          <div className="flex items-start gap-3">
+            <Wrench className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+            <div>
+              <p className="text-sm font-semibold text-foreground">
+                Service technique
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Installation et maintenance
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3">
+            <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+            <div>
+              <p className="text-sm font-semibold text-foreground">
+                Casablanca
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Intervention au Maroc
+              </p>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+
+    {/* COLONNE DROITE : IMAGE */}
+    <div className="relative min-h-[480px] overflow-hidden lg:min-h-[720px]">
+      <img
+        src={hero}
+        alt="Solution industrielle GPS avec imprimante, étiquettes et traçabilité"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-r from-background/30 via-transparent to-transparent" />
+
+      <div className="absolute bottom-7 right-7 hidden rounded-2xl border border-white/10 bg-background/70 px-5 py-4 backdrop-blur-md md:block">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+          Identification • Traçabilité • Performance
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  {/* BANDE MARQUES */}
+  <div className="border-t border-border/60 bg-deep">
+    <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-8 gap-y-4 px-5 py-5 lg:px-8">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+        Marques & technologies proposées
+      </span>
+
+      {marques.map((m) => (
+        <span
+          key={m}
+          className="font-display text-sm font-bold tracking-wide text-foreground/90"
+        >
+          {m}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="border-b border-border/60 bg-deep">
         <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
