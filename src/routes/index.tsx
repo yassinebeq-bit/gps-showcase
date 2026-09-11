@@ -1,17 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
+  Barcode,
   Boxes,
-  Cog,
   Headphones,
   Layers,
   MapPin,
   PackageCheck,
   Phone,
-  Printer,
+  Radio,
   ScanLine,
   ShieldCheck,
   Tags,
+  Workflow,
   Wrench,
 } from "lucide-react";
 import hero from "@/assets/hero-gps-enhanced.jpg";
@@ -19,7 +20,7 @@ import imprimanteEtiquettesAsset from "@/assets/gps-solutions-banner.png.asset.j
 
 const imprimanteEtiquettes = imprimanteEtiquettesAsset.url;
 import { Section } from "@/components/Section";
-import { CONTACT, devisMailto, marques, produits, secteurs, services } from "@/data/catalogue";
+import { CONTACT, devisMailto, marques, secteurs, services } from "@/data/catalogue";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -43,36 +44,74 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const familles = [
+const solutions = [
   {
-    icone: Printer,
-    titre: "Imprimantes industrielles",
-    texte: "Impression d'étiquettes fiable pour production, logistique, retail et textile.",
+    numero: "01",
+    icone: Barcode,
+    titre: "Identification & Marquage",
+    texte: "Solutions professionnelles pour identifier les produits, emballages, composants et opérations industrielles.",
+    exemples: ["Codes-barres", "QR codes", "Identification produit", "Marquage industriel"],
   },
   {
-    icone: Tags,
-    titre: "Étiquettes & rubans",
-    texte: "Étiquettes adhésives, supports spéciaux et rubans transfert thermique adaptés à l'application.",
-  },
-  {
+    numero: "04",
     icone: ScanLine,
-    titre: "Lecteurs & terminaux",
-    texte: "Capture 1D/2D, mobilité et collecte de données pour vos opérations terrain.",
+    titre: "Traçabilité & Capture de données",
+    texte: "Collecter, sécuriser et exploiter les informations tout au long du processus industriel.",
+    exemples: ["Capture de données", "Scanner & lecture", "Flux numériques", "Traçabilité produit"],
   },
   {
+    numero: "05",
+    icone: Radio,
+    titre: "RFID & Automatisation",
+    texte: "Technologies connectées pour automatiser l'identification et améliorer la traçabilité.",
+    exemples: ["Puces & tags RFID", "Ondes RFID", "IoT industriel", "Automatisation"],
+  },
+  {
+    numero: "06",
+    icone: Boxes,
+    titre: "Consommables industriels",
+    texte: "Tous les supports et consommables nécessaires à une identification fiable et durable.",
+    exemples: ["Étiquettes", "Rubans transfert thermique", "Supports d'identification", "Pièces & accessoires"],
+  },
+  {
+    numero: "07",
     icone: Wrench,
-    titre: "Pièces & maintenance",
-    texte: "Pièces de rechange, diagnostic, réparation, programmation et maintenance de vos équipements.",
+    titre: "Services techniques",
+    texte: "Une expertise terrain pour installer, maintenir et optimiser vos solutions d'identification.",
+    exemples: ["Installation & configuration", "Diagnostic & dépannage", "Réparation & programmation", "Support & pièces de rechange"],
+  },
+];
+
+const famillesEtiquettes = [
+  "Papier couché & thermique",
+  "PP, PET & PE",
+  "Résistantes eau & chimie",
+  "Haute & basse température",
+  "Sécurité, VOID & RFID",
+  "Logistique & codes-barres",
+  "Textile & automobile",
+  "Agroalimentaire & pharma",
+  "Transparentes & sur mesure",
+];
+
+const technologiesRubans = [
+  {
+    nom: "WAX",
+    type: "Cire",
+    texte: "La solution économique et rapide pour les applications standards sur papier.",
+    points: ["Qualité code-barres", "Vitesse élevée", "Logistique & usages généraux"],
   },
   {
-    icone: Cog,
-    titre: "Automatisation",
-    texte: "Systèmes d'impression-pose et intégration sur lignes et postes industriels.",
+    nom: "WAX/RESIN",
+    type: "Cire / Résine",
+    texte: "Une impression polyvalente avec une meilleure résistance au frottement.",
+    points: ["Excellente définition", "Papier couché", "Supports synthétiques compatibles"],
   },
   {
-    icone: Layers,
-    titre: "Logiciels d'étiquetage",
-    texte: "Conception, données variables et gestion centralisée avec intégration à vos systèmes.",
+    nom: "RESIN",
+    type: "Résine",
+    texte: "La haute résistance destinée aux environnements industriels les plus exigeants.",
+    points: ["Chimie, chaleur & abrasion", "Résistance élevée", "Supports PET, PP & PE"],
   },
 ];
 
@@ -84,8 +123,6 @@ const preuves = [
 ];
 
 function Index() {
-  const vedettes = produits.slice(0, 6);
-
   return (
     <>
       <section className="border-b border-border/60 bg-background">
@@ -209,29 +246,102 @@ function Index() {
 </section>
 
       <section className="border-b border-border/60 bg-deep">
-        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">Vos besoins, nos solutions</p>
+        <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+          <div className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">Expertise intégrée</p>
             <div className="mt-3 h-1 w-24 rounded-full bg-spectrum" />
-            <h2 className="mt-4 font-display text-2xl font-extrabold text-foreground sm:text-3xl">
-              Une seule équipe pour équiper, identifier, tracer et maintenir
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Nous ne nous limitons pas à la vente d'une imprimante : nous travaillons sur l'ensemble de la chaîne,
-              du support imprimé à la collecte des données et au maintien en condition opérationnelle.
+            <h2 className="mt-5 font-display text-3xl font-extrabold text-foreground sm:text-4xl">Nos solutions</h2>
+            <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Des solutions complètes d'identification, d'étiquetage, de traçabilité et de marquage pour les environnements industriels.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {familles.map(({ icone: Icone, titre, texte }) => (
-              <article key={titre} className="group rounded-2xl border border-border bg-card/80 p-6 transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-card">
-                <div className="grid h-11 w-11 place-items-center rounded-xl border border-accent/20 bg-accent/10">
-                  <Icone className="h-5 w-5 text-accent" />
+          <div className="mt-12 grid gap-5 lg:grid-cols-2">
+            <article className="group relative overflow-hidden rounded-3xl border border-accent/30 bg-card/75 p-6 shadow-card backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
+              <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">02</div>
+              <div className="relative grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+                <div>
+                  <div className="grid h-12 w-12 place-items-center rounded-xl border border-accent/25 bg-accent/10">
+                    <Tags className="h-6 w-6 text-accent" />
+                  </div>
+                  <p className="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-accent">02 — Famille stratégique</p>
+                  <h3 className="mt-3 font-display text-2xl font-bold text-foreground sm:text-3xl">Étiquettes adhésives</h3>
+                  <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    Des matières, adhésifs et formats sélectionnés selon le support, la température, l'environnement et la durée d'utilisation.
+                  </p>
+                  <Link to="/produits" className="mt-7 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-accent hover:text-accent-foreground">
+                    Découvrir nos étiquettes <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
-                <h3 className="mt-5 font-display text-lg font-bold text-foreground">{titre}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{texte}</p>
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {famillesEtiquettes.map((famille) => (
+                    <div key={famille} className="flex min-h-20 items-center rounded-xl border border-border bg-background/45 p-4 text-sm font-medium leading-snug text-foreground transition-colors group-hover:border-accent/20">
+                      {famille}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </article>
+
+            <article className="group relative overflow-hidden rounded-3xl border border-accent/30 bg-card/75 p-6 shadow-card backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
+              <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">03</div>
+              <div className="relative">
+                <div className="grid h-12 w-12 place-items-center rounded-xl border border-accent/25 bg-accent/10">
+                  <Layers className="h-6 w-6 text-accent" />
+                </div>
+                <p className="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-accent">03 — Famille stratégique</p>
+                <h3 className="mt-3 font-display text-2xl font-bold text-foreground sm:text-3xl">Rubans transfert thermique</h3>
+                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  Trois technologies pour ajuster la qualité d'impression et la résistance à chaque application.
+                </p>
+
+                <div className="mt-8 grid gap-4 lg:grid-cols-3">
+                  {technologiesRubans.map((ruban) => (
+                    <div key={ruban.nom} className="rounded-2xl border border-border bg-background/45 p-5">
+                      <p className="font-display text-xl font-extrabold text-accent">{ruban.nom}</p>
+                      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">{ruban.type}</p>
+                      <p className="mt-4 text-sm leading-relaxed text-foreground">{ruban.texte}</p>
+                      <ul className="mt-4 space-y-2 text-xs text-muted-foreground">
+                        {ruban.points.map((point) => <li key={point} className="border-l border-accent/60 pl-3">{point}</li>)}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["Near Edge", "Flat Head", "Ruban textile", "Haute résistance", "Haute température", "Supports synthétiques"].map((type) => (
+                    <span key={type} className="rounded-full border border-border bg-secondary/50 px-4 py-2 text-xs font-medium text-muted-foreground">{type}</span>
+                  ))}
+                </div>
+                <Link to="/produits" className="mt-7 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-accent hover:text-accent-foreground">
+                  Découvrir nos rubans <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </article>
+
+            {solutions.map(({ numero, icone: Icone, titre, texte, exemples }) => (
+              <article key={numero} className="group relative overflow-hidden rounded-2xl border border-border bg-card/65 p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-card sm:p-7">
+                <div className="absolute right-5 top-4 font-display text-5xl font-extrabold text-accent/10">{numero}</div>
+                <div className="relative">
+                  <div className="grid h-11 w-11 place-items-center rounded-xl border border-accent/20 bg-accent/10">
+                    <Icone className="h-5 w-5 text-accent" />
+                  </div>
+                  <p className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-accent">{numero}</p>
+                  <h3 className="mt-2 font-display text-xl font-bold text-foreground">{titre}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{texte}</p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {exemples.map((exemple) => (
+                      <span key={exemple} className="rounded-full border border-border px-3 py-1.5 text-xs text-muted-foreground">{exemple}</span>
+                    ))}
+                  </div>
+                </div>
               </article>
             ))}
+          </div>
+
+          <div className="mt-10 flex items-center gap-4 border-t border-border/60 pt-8 text-sm text-muted-foreground">
+            <Workflow className="h-5 w-5 shrink-0 text-accent" />
+            <p>Une chaîne maîtrisée : Étiquette + Ruban + Identification + Capture de données + RFID + Traçabilité + Service technique.</p>
           </div>
         </div>
       </section>
@@ -275,37 +385,6 @@ function Index() {
                 <Icone className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                 <div><p className="font-display text-sm font-bold text-foreground">{titre}</p><p className="mt-1 text-xs leading-relaxed text-muted-foreground">{texte}</p></div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
-          <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">Catalogue</p>
-              <h2 className="mt-4 font-display text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
-                Des références pour les environnements industriels exigeants
-              </h2>
-            </div>
-            <Link to="/produits" className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-accent">
-              Voir tout le catalogue <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {vedettes.map((p) => (
-              <article key={p.id} className="group overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent/50 hover:shadow-card">
-                <div className="aspect-[4/3] overflow-hidden bg-secondary">
-                  <img src={p.image} alt={`${p.marque} ${p.modele}`} loading="lazy" width={1024} height={768} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                </div>
-                <div className="p-6">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">{p.marque}</span>
-                  <h3 className="mt-2 font-display text-lg font-bold text-foreground">{p.modele}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
-                </div>
-              </article>
             ))}
           </div>
         </div>
