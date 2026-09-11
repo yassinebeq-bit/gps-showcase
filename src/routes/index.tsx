@@ -3,7 +3,6 @@ import {
   ArrowRight,
   Barcode,
   Boxes,
-  Cog,
   Headphones,
   Layers,
   MapPin,
