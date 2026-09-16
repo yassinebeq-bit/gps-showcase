@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
-import { CONTACT, devisMailto } from "@/data/catalogue";
+import { CONTACT, devisMailto, whatsappHref } from "@/data/catalogue";
 
 const nav = [
   { to: "/", label: "Accueil" },
@@ -58,6 +58,15 @@ export function SiteHeader() {
           >
             Demander un devis
           </a>
+          <a
+            href={whatsappHref()}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Contacter GPS sur WhatsApp"
+            className="hidden h-10 w-10 place-items-center rounded-full border border-[#25D366]/60 text-[#25D366] transition-colors hover:bg-[#25D366]/10 sm:grid"
+          >
+            <MessageCircle className="h-5 w-5" />
+          </a>
           <button
             type="button"
             aria-label="Ouvrir le menu"
@@ -88,6 +97,14 @@ export function SiteHeader() {
             className="mt-2 block rounded-lg bg-brand px-3 py-3 text-center text-sm font-semibold text-primary-foreground"
           >
             Demander un devis
+          </a>
+          <a
+            href={whatsappHref()}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-2 flex items-center justify-center gap-2 rounded-lg border border-[#25D366]/60 px-3 py-3 text-sm font-semibold text-foreground"
+          >
+            <MessageCircle className="h-4 w-4 text-[#25D366]" /> WhatsApp
           </a>
         </nav>
       )}

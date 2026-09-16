@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, Phone, Mail, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Globe, MessageCircle } from "lucide-react";
 import { PageHero, Section } from "@/components/Section";
-import { CONTACT, devisMailto } from "@/data/catalogue";
+import { CONTACT, devisMailto, whatsappHref } from "@/data/catalogue";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -68,19 +68,32 @@ function ContactPage() {
               Le bouton ci-dessous ouvre votre messagerie avec un e-mail déjà préparé : il vous
               suffit de compléter votre société, votre secteur et votre besoin, puis d'envoyer.
             </p>
-            <a
-              href={devisMailto()}
-              className="mt-7 inline-block rounded-full bg-brand px-6 py-3 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
-            >
-              Préparer ma demande par e-mail
-            </a>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a
+                href={devisMailto()}
+                className="inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:-translate-y-0.5"
+              >
+                Préparer ma demande par e-mail
+              </a>
+              <a
+                href={whatsappHref()}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-[#25D366]/60 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-[#25D366]/10"
+              >
+                <MessageCircle className="h-4 w-4 text-[#25D366]" /> WhatsApp
+              </a>
+            </div>
             <p className="mt-6 text-sm text-muted-foreground">
               Vous préférez échanger de vive voix ?{" "}
               <a href={CONTACT.telHref} className="font-medium text-foreground hover:text-accent">
                 {CONTACT.tel}
               </a>{" "}
               /{" "}
-              <a href={CONTACT.mobileHref} className="font-medium text-foreground hover:text-accent">
+              <a
+                href={CONTACT.mobileHref}
+                className="font-medium text-foreground hover:text-accent"
+              >
                 {CONTACT.mobile}
               </a>
             </p>

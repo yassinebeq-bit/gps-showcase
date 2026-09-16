@@ -23,13 +23,7 @@ export function PageHero({
   );
 }
 
-export function Section({
-  children,
-  className = "",
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+export function Section({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <section className={`mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24 ${className}`}>
       {children}

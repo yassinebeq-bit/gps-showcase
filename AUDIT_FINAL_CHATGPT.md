@@ -1,6 +1,7 @@
 # Audit final GPS Showcase — 9 septembre 2026
 
 ## Validé dans le code
+
 - Routes principales présentes : Accueil, Produits, Secteurs, Services, Contact.
 - Liens internes du menu correspondent aux routes existantes.
 - CTA devis présents sur l'accueil, produits, secteurs, services, contact et en-tête.
@@ -13,6 +14,7 @@
 - Logo et hero améliorés stockés localement.
 
 ## Statut avant publication réelle
+
 1. Coordonnées GPS confirmées par l'utilisateur :
    - 4, rue Bangkok, Étage 2, Z.I. Sidi Bernoussi — Casablanca, Maroc
    - +212 (0)5 22 34 39 80
@@ -24,4 +26,5 @@
 5. Le projet utilise TanStack Start/Nitro. Le mode de déploiement Heberjahiz doit être choisi après vérification des capacités exactes de l'hébergement ; ne pas l'envoyer comme un simple site HTML statique sans validation du build.
 
 ## Recommandation
+
 La version est prête pour synchronisation dans Lovable/GitHub et validation visuelle. La mise en production Heberjahiz doit attendre la réussite d'un build de production et la vérification de la compatibilité de l'hébergement.

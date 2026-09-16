@@ -30,7 +30,11 @@ export const produits: Produit[] = [
     categorie: "Impression industrielle",
     description:
       "Imprimante industrielle haut de gamme pour les environnements de production exigeants et les volumes d'étiquettes élevés.",
-    points: ["Résolutions 203 / 300 / 600 dpi", "Écran couleur tactile", "Châssis métallique intensif"],
+    points: [
+      "Résolutions 203 / 300 / 600 dpi",
+      "Écran couleur tactile",
+      "Châssis métallique intensif",
+    ],
     image: printer,
     ficheUrl: "https://www.zebra.com/gb/en/products/printers/industrial/zt600-series/zt610.html",
     specs: [
@@ -47,7 +51,11 @@ export const produits: Produit[] = [
     categorie: "Impression industrielle",
     description:
       "Imprimante industrielle 4 pouces pour l'étiquetage de cartons, palettes et pièces en atelier ou en entrepôt.",
-    points: ["Résolutions 203 / 300 / 600 dpi", "Écran tactile couleur", "Connectivité filaire et sans fil"],
+    points: [
+      "Résolutions 203 / 300 / 600 dpi",
+      "Écran tactile couleur",
+      "Connectivité filaire et sans fil",
+    ],
     image: printer,
     ficheUrl: "https://www.zebra.com/us/en/products/printers/industrial/zt400-series/zt411.html",
     specs: [
@@ -64,7 +72,11 @@ export const produits: Produit[] = [
     categorie: "Étiquetage mobile",
     description:
       "Imprimante mobile durcie pour l'impression d'étiquettes directement sur les quais, en magasin ou en tournée.",
-    points: ["Impression 4 pouces mobile", "Résolution 203 dpi", "Conception durcie, autonomie longue"],
+    points: [
+      "Impression 4 pouces mobile",
+      "Résolution 203 dpi",
+      "Conception durcie, autonomie longue",
+    ],
     image: mobile,
   },
   {
@@ -84,7 +96,11 @@ export const produits: Produit[] = [
     categorie: "Étiquettes textiles",
     description:
       "Système d'impression dédié aux étiquettes textiles : étiquettes d'entretien, de composition et de traçabilité vêtement.",
-    points: ["Impression sur rubans textiles", "Résolution 300 dpi", "Étiquettes d'entretien et de taille"],
+    points: [
+      "Impression sur rubans textiles",
+      "Résolution 300 dpi",
+      "Étiquettes d'entretien et de taille",
+    ],
     image: textile,
   },
   {
@@ -116,6 +132,7 @@ export const produits: Produit[] = [
       "Imprimante compacte pour l'étiquetage au poste de travail : expédition, réception et contrôle qualité.",
     points: ["Résolution 203 dpi", "Format compact", "Codes-barres 1D / 2D"],
     image: printer,
+    ficheUrl: "https://www.postekchina.com/product_E/",
   },
   {
     id: "postek-tx3",
@@ -124,8 +141,9 @@ export const produits: Produit[] = [
     categorie: "Impression industrielle",
     description:
       "Imprimante industrielle haute définition pour les petites étiquettes et les marquages techniques détaillés.",
-    points: ["Résolution jusqu'à 600 dpi", "Châssis industriel", "Impression fine et régulière"],
+    points: ["Résolution 300 dpi", "Châssis industriel", "Impression fine et régulière"],
     image: printer,
+    ficheUrl: "https://postekus.com/product_TX/",
   },
   {
     id: "postek-zx2",
@@ -134,7 +152,7 @@ export const produits: Produit[] = [
     categorie: "Impression industrielle",
     description:
       "Imprimante industrielle polyvalente pour les volumes moyens en production, logistique et agroalimentaire.",
-    points: ["Résolution 203 / 300 dpi", "Écran tactile couleur", "Utilisation continue"],
+    points: ["Résolution 203 dpi", "Écran tactile couleur", "Utilisation continue"],
     image: printer,
   },
   {
@@ -144,7 +162,7 @@ export const produits: Produit[] = [
     categorie: "Impression industrielle",
     description:
       "Imprimante industrielle robuste pour l'étiquetage intensif de cartons et de palettes en fin de ligne.",
-    points: ["Résolution jusqu'à 600 dpi", "Écran tactile", "Grande capacité de rouleau"],
+    points: ["Résolution 300 dpi", "Écran tactile", "Grande capacité de rouleau"],
     image: printer,
   },
   {
@@ -163,9 +181,14 @@ export const produits: Produit[] = [
     marque: "POSTEK",
     categorie: "Impression industrielle",
     description:
-      "Imprimante industrielle grande largeur pour les étiquettes logistiques et les supports de format important.",
-    points: ["Impression grande largeur", "Résolution 203 / 300 dpi", "Volumes d'impression élevés"],
+      "Imprimante haute résolution pour les petites étiquettes, les codes 2D denses et les marquages techniques détaillés.",
+    points: [
+      "Résolution 600 dpi",
+      "Largeur d'impression jusqu'à 104 mm",
+      "Impression de haute précision",
+    ],
     image: printer,
+    ficheUrl: "https://www.postekus.com/product_G/",
   },
   {
     id: "consommables",
@@ -205,10 +228,18 @@ export const CONTACT = {
   telHref: "tel:+212522343980",
   mobile: "+212 663 197 938",
   mobileHref: "tel:+212663197938",
+  whatsapp: "+212 663 197 938",
   email: "contact@gps.co.ma",
   site: "www.gps.co.ma",
   siteHref: "https://www.gps.co.ma",
 };
+
+export function whatsappHref(produit?: string) {
+  const message = produit
+    ? `Bonjour, je souhaite recevoir des informations et un devis concernant : ${produit}.`
+    : "Bonjour, je souhaite échanger avec GPS au sujet d'une solution d'identification et de traçabilité.";
+  return `https://wa.me/212663197938?text=${encodeURIComponent(message)}`;
+}
 
 export function devisMailto(produit?: string) {
   const sujet = produit
