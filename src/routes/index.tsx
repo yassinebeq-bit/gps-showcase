@@ -335,19 +335,19 @@ function Index() {
               </div>
             </article>
 
-            <article className="group relative overflow-hidden rounded-3xl border border-accent/30 bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
+            <article className="group relative overflow-hidden rounded-3xl border border-white/20 bg-transparent p-6 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
               <img
                 src={rubansBackground}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-55 transition-transform duration-700 group-hover:scale-[1.02]"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-90 brightness-110 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#07111f] via-[#07111f]/90 to-[#07111f]/45" />
+              <div className="absolute inset-0 bg-gradient-to-br from-background/75 via-background/35 to-background/5" />
               <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
                 03
               </div>
               <div className="relative">
-                <div className="grid h-12 w-12 place-items-center rounded-xl border border-accent/25 bg-accent/10">
+                <div className="grid h-12 w-12 place-items-center rounded-xl border border-accent/25 bg-accent/10 backdrop-blur-sm">
                   <Layers className="h-6 w-6 text-accent" />
                 </div>
                 <p className="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-accent">
@@ -356,7 +356,7 @@ function Index() {
                 <h3 className="mt-3 font-display text-2xl font-bold text-foreground sm:text-3xl">
                   Rubans transfert thermique
                 </h3>
-                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/90 sm:text-base">
                   Trois technologies pour ajuster la qualité d'impression et la résistance à chaque
                   application.
                 </p>
@@ -365,7 +365,7 @@ function Index() {
                   {technologiesRubans.map((ruban) => (
                     <div
                       key={ruban.nom}
-                      className="rounded-2xl border border-white/15 bg-background/80 p-5 backdrop-blur-md"
+                      className="rounded-2xl border border-white/20 bg-background/55 p-5 backdrop-blur-md"
                     >
                       <p className="font-display text-xl font-extrabold text-accent">{ruban.nom}</p>
                       <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -394,7 +394,7 @@ function Index() {
                   ].map((type) => (
                     <span
                       key={type}
-                      className="rounded-full border border-border bg-secondary/50 px-4 py-2 text-xs font-medium text-muted-foreground"
+                      className="rounded-full border border-white/20 bg-secondary/60 px-4 py-2 text-xs font-medium text-muted-foreground backdrop-blur-sm"
                     >
                       {type}
                     </span>
@@ -402,7 +402,7 @@ function Index() {
                 </div>
                 <Link
                   to="/produits"
-                  className="mt-7 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                  className="mt-7 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-accent hover:text-accent-foreground"
                 >
                   Découvrir nos rubans <ArrowRight className="h-4 w-4" />
                 </Link>
