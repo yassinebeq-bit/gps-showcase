@@ -326,7 +326,7 @@ function Index() {
                   {famillesEtiquettes.map((famille) => (
                     <div
                       key={famille}
-                      className="flex min-h-20 items-center rounded-xl border border-white/15 bg-background/80 p-4 text-sm font-medium leading-snug text-foreground backdrop-blur-md transition-colors group-hover:border-accent/35"
+                      className="flex min-h-20 items-center rounded-xl border border-white/15 bg-background/90 p-4 text-sm font-medium leading-snug text-foreground backdrop-blur-md transition-colors group-hover:border-accent/35"
                     >
                       {famille}
                     </div>
@@ -365,7 +365,7 @@ function Index() {
                   {technologiesRubans.map((ruban) => (
                     <div
                       key={ruban.nom}
-                      className="rounded-2xl border border-white/15 bg-background/80 p-5 backdrop-blur-md"
+                      className="rounded-2xl border border-white/15 bg-background/90 p-5 backdrop-blur-md"
                     >
                       <p className="font-display text-xl font-extrabold text-accent">{ruban.nom}</p>
                       <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -394,7 +394,7 @@ function Index() {
                   ].map((type) => (
                     <span
                       key={type}
-                      className="rounded-full border border-border bg-secondary/50 px-4 py-2 text-xs font-medium text-muted-foreground"
+                      className="rounded-full border border-border bg-secondary/70 px-4 py-2 text-xs font-medium text-muted-foreground"
                     >
                       {type}
                     </span>
