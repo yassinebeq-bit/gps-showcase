@@ -294,9 +294,9 @@ function Index() {
                 src={etiquettesBackground}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-80 transition-transform duration-700 group-hover:scale-[1.02]"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-90 brightness-110 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/55 to-background/15" />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/75 via-background/35 to-background/5" />
               <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
                 02
               </div>
