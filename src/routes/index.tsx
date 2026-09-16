@@ -394,7 +394,7 @@ function Index() {
                   ].map((type) => (
                     <span
                       key={type}
-                      className="rounded-full border border-white/20 bg-secondary/60 px-4 py-2 text-xs font-medium text-muted-foreground backdrop-blur-sm"
+                      className="rounded-full border border-white/20 bg-secondary/45 px-4 py-2 text-xs font-medium text-muted-foreground backdrop-blur-sm"
                     >
                       {type}
                     </span>
