@@ -223,7 +223,7 @@ export const produits: Produit[] = [
 ];
 
 export const CONTACT = {
-  adresse: "4, rue Bangkok, Étage 2, Z.I. Sidi Bernoussi — Casablanca, Maroc",
+  adresse: "14 Rue Lucerne, Rés. Latifa, 1er étage, N°3, Quartier des Hôpitaux — Casablanca, Maroc",
   tel: "+212 (0)5 22 34 39 80",
   telHref: "tel:+212522343980",
   mobile: "+212 663 197 938",

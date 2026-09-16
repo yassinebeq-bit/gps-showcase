@@ -249,3 +249,12 @@
   background-clip: text;
   color: transparent;
 }
+
+.privacy-content ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+
+.privacy-content li + li {
+  margin-top: 0.35rem;
+}

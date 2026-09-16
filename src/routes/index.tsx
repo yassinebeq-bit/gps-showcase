@@ -294,9 +294,9 @@ function Index() {
                 src={etiquettesBackground}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-90 brightness-110 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-55 transition-transform duration-700 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-background/75 via-background/35 to-background/5" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#07111f] via-[#07111f]/90 to-[#07111f]/45" />
               <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
                 02
               </div>
@@ -326,7 +326,7 @@ function Index() {
                   {famillesEtiquettes.map((famille) => (
                     <div
                       key={famille}
-                      className="flex min-h-20 items-center rounded-xl border border-white/15 bg-background/90 p-4 text-sm font-medium leading-snug text-foreground backdrop-blur-md transition-colors group-hover:border-accent/35"
+                      className="flex min-h-20 items-center rounded-xl border border-white/15 bg-background/80 p-4 text-sm font-medium leading-snug text-foreground backdrop-blur-md transition-colors group-hover:border-accent/35"
                     >
                       {famille}
                     </div>
@@ -340,9 +340,9 @@ function Index() {
                 src={rubansBackground}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-90 brightness-110 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-55 transition-transform duration-700 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/40 to-background/5" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#07111f] via-[#07111f]/90 to-[#07111f]/45" />
               <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
                 03
               </div>
@@ -365,7 +365,7 @@ function Index() {
                   {technologiesRubans.map((ruban) => (
                     <div
                       key={ruban.nom}
-                      className="rounded-2xl border border-white/15 bg-background/90 p-5 backdrop-blur-md"
+                      className="rounded-2xl border border-white/15 bg-background/80 p-5 backdrop-blur-md"
                     >
                       <p className="font-display text-xl font-extrabold text-accent">{ruban.nom}</p>
                       <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -394,7 +394,7 @@ function Index() {
                   ].map((type) => (
                     <span
                       key={type}
-                      className="rounded-full border border-border bg-secondary/70 px-4 py-2 text-xs font-medium text-muted-foreground"
+                      className="rounded-full border border-border bg-secondary/50 px-4 py-2 text-xs font-medium text-muted-foreground"
                     >
                       {type}
                     </span>

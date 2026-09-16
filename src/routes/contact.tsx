@@ -6,11 +6,11 @@ import { CONTACT, devisMailto, whatsappHref } from "@/data/catalogue";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — GPS Casablanca, Z.I. Sidi Bernoussi" },
+      { title: "Contact — GPS Casablanca, Quartier des Hôpitaux" },
       {
         name: "description",
         content:
-          "Contactez Global Performance Services : 4 rue Bangkok, Z.I. Sidi Bernoussi, Casablanca. Tél +212 (0)5 22 34 39 80 — contact@gps.co.ma.",
+          "Contactez Global Performance Services : 14 Rue Lucerne, Rés. Latifa, Quartier des Hôpitaux, Casablanca. Tél +212 (0)5 22 34 39 80 — contact@gps.co.ma.",
       },
       { property: "og:title", content: "Contacter Global Performance Services" },
       {

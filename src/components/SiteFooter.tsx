@@ -81,7 +81,13 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border/60 px-5 py-6 text-center text-xs text-muted-foreground lg:px-8">
-        <p>© {new Date().getFullYear()} Global Performance Services — Tous droits réservés.</p>
+        <p>
+          © {new Date().getFullYear()} Global Performance Services — Tous droits réservés
+          <span className="mx-2 text-border">|</span>
+          <Link to="/politique-de-confidentialite" className="hover:text-foreground">
+            Politique de confidentialité
+          </Link>
+        </p>
         <p className="mx-auto mt-2 max-w-4xl leading-relaxed">
           Les marques citées appartiennent à leurs propriétaires respectifs. Leur mention sert
           uniquement à identifier les produits, technologies et solutions proposés ou pris en charge

@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
 import { Route as ProduitsRouteImport } from './routes/produits'
 import { Route as SecteursRouteImport } from './routes/secteurs'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -25,6 +26,12 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PolitiqueDeConfidentialiteRoute =
+  PolitiqueDeConfidentialiteRouteImport.update({
+    id: '/politique-de-confidentialite',
+    path: '/politique-de-confidentialite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProduitsRoute = ProduitsRouteImport.update({
   id: '/produits',
   path: '/produits',
@@ -44,6 +51,7 @@ const ServicesRoute = ServicesRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/produits': typeof ProduitsRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
@@ -51,6 +59,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/produits': typeof ProduitsRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
@@ -59,21 +68,42 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/produits': typeof ProduitsRoute
   '/secteurs': typeof SecteursRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/produits' | '/secteurs' | '/services'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/politique-de-confidentialite'
+    | '/produits'
+    | '/secteurs'
+    | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/produits' | '/secteurs' | '/services'
-  id: '__root__' | '/' | '/contact' | '/produits' | '/secteurs' | '/services'
+  to:
+    | '/'
+    | '/contact'
+    | '/politique-de-confidentialite'
+    | '/produits'
+    | '/secteurs'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/politique-de-confidentialite'
+    | '/produits'
+    | '/secteurs'
+    | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
   ProduitsRoute: typeof ProduitsRoute
   SecteursRoute: typeof SecteursRoute
   ServicesRoute: typeof ServicesRoute
@@ -93,6 +123,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politique-de-confidentialite': {
+      id: '/politique-de-confidentialite'
+      path: '/politique-de-confidentialite'
+      fullPath: '/politique-de-confidentialite'
+      preLoaderRoute: typeof PolitiqueDeConfidentialiteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/produits': {
@@ -122,6 +159,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
   ProduitsRoute: ProduitsRoute,
   SecteursRoute: SecteursRoute,
   ServicesRoute: ServicesRoute,
