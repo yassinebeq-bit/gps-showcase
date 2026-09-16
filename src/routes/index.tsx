@@ -16,7 +16,9 @@ import {
   Wrench,
   MessageCircle,
 } from "lucide-react";
-import hero from "@/assets/hero-gps-enhanced.jpg";
+import hero from "@/assets/hero-gps-generic.png";
+import etiquettesBackground from "@/assets/bg-etiquettes-adhesives.png";
+import rubansBackground from "@/assets/bg-rubans-thermiques.png";
 import imprimanteEtiquettesAsset from "@/assets/gps-solutions-banner.png.asset.json";
 
 const imprimanteEtiquettes = imprimanteEtiquettesAsset.url;
@@ -234,11 +236,11 @@ function Index() {
           </div>
 
           {/* COLONNE DROITE : IMAGE */}
-          <div className="relative min-h-[420px] overflow-hidden bg-[#07111f] sm:min-h-[500px] lg:min-h-[600px]">
+          <div className="relative min-h-[360px] overflow-hidden bg-[#07111f] sm:min-h-[460px] lg:min-h-[560px]">
             <img
               src={hero}
-              alt="Solution industrielle GPS avec imprimante, étiquettes et traçabilité"
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              alt="Imprimantes d'étiquettes, lecteurs code-barres et RFID avec consommables"
+              className="absolute inset-0 h-full w-full object-contain object-center"
             />
 
             <div className="absolute inset-0 bg-gradient-to-r from-background/30 via-transparent to-transparent" />
@@ -287,7 +289,14 @@ function Index() {
           </div>
 
           <div className="mt-12 grid gap-5 lg:grid-cols-2">
-            <article className="group relative overflow-hidden rounded-3xl border border-accent/30 bg-card/75 p-6 shadow-card backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
+            <article className="group relative overflow-hidden rounded-3xl border border-accent/30 bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
+              <img
+                src={etiquettesBackground}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-55 transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#07111f] via-[#07111f]/90 to-[#07111f]/45" />
               <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
                 02
               </div>
@@ -317,7 +326,7 @@ function Index() {
                   {famillesEtiquettes.map((famille) => (
                     <div
                       key={famille}
-                      className="flex min-h-20 items-center rounded-xl border border-border bg-background/45 p-4 text-sm font-medium leading-snug text-foreground transition-colors group-hover:border-accent/20"
+                      className="flex min-h-20 items-center rounded-xl border border-white/15 bg-background/80 p-4 text-sm font-medium leading-snug text-foreground backdrop-blur-md transition-colors group-hover:border-accent/35"
                     >
                       {famille}
                     </div>
@@ -326,7 +335,14 @@ function Index() {
               </div>
             </article>
 
-            <article className="group relative overflow-hidden rounded-3xl border border-accent/30 bg-card/75 p-6 shadow-card backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
+            <article className="group relative overflow-hidden rounded-3xl border border-accent/30 bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
+              <img
+                src={rubansBackground}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-55 transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#07111f] via-[#07111f]/90 to-[#07111f]/45" />
               <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
                 03
               </div>
@@ -349,7 +365,7 @@ function Index() {
                   {technologiesRubans.map((ruban) => (
                     <div
                       key={ruban.nom}
-                      className="rounded-2xl border border-border bg-background/45 p-5"
+                      className="rounded-2xl border border-white/15 bg-background/80 p-5 backdrop-blur-md"
                     >
                       <p className="font-display text-xl font-extrabold text-accent">{ruban.nom}</p>
                       <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
