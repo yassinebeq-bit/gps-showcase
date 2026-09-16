@@ -365,7 +365,7 @@ function Index() {
                   {technologiesRubans.map((ruban) => (
                     <div
                       key={ruban.nom}
-                      className="rounded-2xl border border-white/20 bg-background/55 p-5 backdrop-blur-md"
+                      className="rounded-2xl border border-white/20 bg-background/40 p-5 backdrop-blur-lg"
                     >
                       <p className="font-display text-xl font-extrabold text-accent">{ruban.nom}</p>
                       <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
