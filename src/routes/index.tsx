@@ -340,9 +340,9 @@ function Index() {
                 src={rubansBackground}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-80 transition-transform duration-700 group-hover:scale-[1.02]"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-90 brightness-110 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-background/92 via-background/55 to-background/15" />
+              <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/40 to-background/5" />
               <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
                 03
               </div>
