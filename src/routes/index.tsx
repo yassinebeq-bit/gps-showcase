@@ -365,14 +365,14 @@ function Index() {
                   {technologiesRubans.map((ruban) => (
                     <div
                       key={ruban.nom}
-                      className="rounded-2xl border border-white/20 bg-background/40 p-5 backdrop-blur-lg"
+                      className="rounded-2xl border border-white/25 bg-background/15 p-5 shadow-sm backdrop-blur-xl transition-colors group-hover:bg-background/25"
                     >
                       <p className="font-display text-xl font-extrabold text-accent">{ruban.nom}</p>
-                      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-foreground/80">
                         {ruban.type}
                       </p>
-                      <p className="mt-4 text-sm leading-relaxed text-foreground">{ruban.texte}</p>
-                      <ul className="mt-4 space-y-2 text-xs text-muted-foreground">
+                      <p className="mt-4 text-sm leading-relaxed text-foreground/95">{ruban.texte}</p>
+                      <ul className="mt-4 space-y-2 text-xs text-foreground/85">
                         {ruban.points.map((point) => (
                           <li key={point} className="border-l border-accent/60 pl-3">
                             {point}
@@ -394,7 +394,7 @@ function Index() {
                   ].map((type) => (
                     <span
                       key={type}
-                      className="rounded-full border border-white/20 bg-secondary/45 px-4 py-2 text-xs font-medium text-muted-foreground backdrop-blur-sm"
+                      className="rounded-full border border-white/25 bg-background/15 px-4 py-2 text-xs font-medium text-foreground/90 shadow-sm backdrop-blur-xl transition-colors group-hover:bg-background/25"
                     >
                       {type}
                     </span>
