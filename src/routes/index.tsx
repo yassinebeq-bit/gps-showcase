@@ -326,7 +326,7 @@ function Index() {
                   {famillesEtiquettes.map((famille) => (
                     <div
                       key={famille}
-                      className="flex min-h-20 items-center rounded-xl border border-white/20 bg-background/40 p-4 text-sm font-medium leading-snug text-foreground backdrop-blur-lg transition-colors group-hover:border-accent/35"
+                      className="flex min-h-20 items-center rounded-xl border border-white/25 bg-background/15 p-4 text-sm font-medium leading-snug text-foreground shadow-sm backdrop-blur-xl transition-colors group-hover:border-accent/40 group-hover:bg-background/25"
                     >
                       {famille}
                     </div>
