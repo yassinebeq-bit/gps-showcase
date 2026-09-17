@@ -294,9 +294,9 @@ function Index() {
                 src={etiquettesBackground}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-90 brightness-110 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-95 brightness-115 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/30 to-background/5" />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/45 via-background/15 to-transparent" />
               <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
                 02
               </div>
@@ -317,7 +317,7 @@ function Index() {
                   </p>
                   <Link
                     to="/produits"
-                    className="mt-7 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+                    className="mt-7 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/15 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-accent hover:text-accent-foreground"
                   >
                     Découvrir nos étiquettes <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -326,7 +326,7 @@ function Index() {
                   {famillesEtiquettes.map((famille) => (
                     <div
                       key={famille}
-                      className="flex min-h-20 items-center rounded-xl border border-white/25 bg-background/15 p-4 text-sm font-medium leading-snug text-foreground shadow-sm backdrop-blur-xl transition-colors group-hover:border-accent/40 group-hover:bg-background/25"
+                      className="flex min-h-20 items-center rounded-xl border border-white/25 bg-background/5 p-4 text-sm font-medium leading-snug text-foreground shadow-sm backdrop-blur-md transition-colors group-hover:border-accent/40 group-hover:bg-background/10"
                     >
                       {famille}
                     </div>
@@ -340,9 +340,9 @@ function Index() {
                 src={rubansBackground}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-90 brightness-110 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-95 brightness-115 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-background/75 via-background/35 to-background/5" />
+              <div className="absolute inset-0 bg-gradient-to-br from-background/45 via-background/15 to-transparent" />
               <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
                 03
               </div>
@@ -356,7 +356,7 @@ function Index() {
                 <h3 className="mt-3 font-display text-2xl font-bold text-foreground sm:text-3xl">
                   Rubans transfert thermique
                 </h3>
-                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/90 sm:text-base">
+                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/95 sm:text-base">
                   Trois technologies pour ajuster la qualité d'impression et la résistance à chaque
                   application.
                 </p>
@@ -365,14 +365,14 @@ function Index() {
                   {technologiesRubans.map((ruban) => (
                     <div
                       key={ruban.nom}
-                      className="rounded-2xl border border-white/25 bg-background/15 p-5 shadow-sm backdrop-blur-xl transition-colors group-hover:bg-background/25"
+                      className="rounded-2xl border border-white/25 bg-background/5 p-5 shadow-sm backdrop-blur-md transition-colors group-hover:bg-background/10"
                     >
                       <p className="font-display text-xl font-extrabold text-accent">{ruban.nom}</p>
-                      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-foreground/80">
+                      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-foreground/85">
                         {ruban.type}
                       </p>
                       <p className="mt-4 text-sm leading-relaxed text-foreground/95">{ruban.texte}</p>
-                      <ul className="mt-4 space-y-2 text-xs text-foreground/85">
+                      <ul className="mt-4 space-y-2 text-xs text-foreground/90">
                         {ruban.points.map((point) => (
                           <li key={point} className="border-l border-accent/60 pl-3">
                             {point}
@@ -394,7 +394,7 @@ function Index() {
                   ].map((type) => (
                     <span
                       key={type}
-                      className="rounded-full border border-white/25 bg-background/15 px-4 py-2 text-xs font-medium text-foreground/90 shadow-sm backdrop-blur-xl transition-colors group-hover:bg-background/25"
+                      className="rounded-full border border-white/25 bg-background/5 px-4 py-2 text-xs font-medium text-foreground/95 shadow-sm backdrop-blur-md transition-colors group-hover:bg-background/10"
                     >
                       {type}
                     </span>
