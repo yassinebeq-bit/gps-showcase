@@ -89,10 +89,10 @@ export function SiteFooter() {
           </Link>
         </p>
         <p className="mx-auto mt-2 max-w-4xl leading-relaxed">
-          Les marques citées appartiennent à leurs propriétaires respectifs. Leur mention sert
-          uniquement à identifier les produits, technologies et solutions proposés ou pris en charge
-          par GPS et ne constitue pas, à elle seule, une déclaration de partenariat ou d'agrément
-          officiel.
+          GPS est un fournisseur et intégrateur indépendant. Les marques et logos affichés
+          appartiennent à leurs propriétaires respectifs et servent uniquement à identifier les
+          produits et technologies disponibles selon les besoins. Leur présence n'implique aucune
+          affiliation, représentation, approbation ou agrément officiel, sauf mention contraire.
         </p>
       </div>
     </footer>

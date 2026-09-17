@@ -240,7 +240,7 @@ function Index() {
         <div className="border-t border-border/60 bg-deep">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-8 gap-y-4 px-5 py-5 lg:px-8">
             <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-              Marques & technologies proposées selon disponibilité
+              Marques et technologies disponibles selon les besoins
             </span>
 
             {marquesAffichees.map((m) => (
