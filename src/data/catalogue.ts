@@ -2,11 +2,10 @@ import printer from "@/assets/prod-printer.jpg";
 import scanner from "@/assets/prod-scanner.jpg";
 import applicator from "@/assets/prod-applicator.jpg";
 import consumables from "@/assets/prod-consumables.jpg";
-import software from "@/assets/prod-software.jpg";
 import mobile from "@/assets/prod-mobile.jpg";
 import textile from "@/assets/prod-textile.jpg";
 
-export type Marque = "Zebra" | "Avery Dennison" | "POSTEK" | "NiceLabel";
+export type Marque = "Zebra" | "Avery Dennison" | "POSTEK" | "CAB";
 
 export type Produit = {
   id: string;
@@ -20,7 +19,7 @@ export type Produit = {
   specs?: { label: string; valeur: string }[];
 };
 
-export const marques: Marque[] = ["Zebra", "Avery Dennison", "POSTEK", "NiceLabel"];
+export const marques: Marque[] = ["Zebra", "Avery Dennison", "POSTEK", "CAB"];
 
 export const produits: Produit[] = [
   {
@@ -201,24 +200,15 @@ export const produits: Produit[] = [
     image: consumables,
   },
   {
-    id: "nicelabel-designer",
-    modele: "NiceLabel Designer",
-    marque: "NiceLabel",
-    categorie: "Logiciels d'étiquetage",
+    id: "cab-squix-4",
+    modele: "SQUIX 4",
+    marque: "CAB",
+    categorie: "Impression industrielle",
     description:
-      "Logiciel de conception d'étiquettes avec codes-barres, données variables et modèles normalisés.",
-    points: ["Conception d'étiquettes", "Codes-barres 1D / 2D", "Données variables"],
-    image: software,
-  },
-  {
-    id: "nicelabel-lms",
-    modele: "NiceLabel LMS",
-    marque: "NiceLabel",
-    categorie: "Logiciels d'étiquetage",
-    description:
-      "Plateforme de gestion centralisée de l'étiquetage : droits, versions, historique et connexion aux systèmes ERP / WMS.",
-    points: ["Gestion centralisée", "Traçabilité des versions", "Intégration ERP / WMS"],
-    image: software,
+      "Imprimante industrielle polyvalente pour l'identification de produits, composants, cartons et palettes.",
+    points: ["Largeur d'impression 4 pouces", "Écran tactile couleur", "Nombreuses interfaces et options"],
+    image: printer,
+    ficheUrl: "https://www.cab.de/en/marking/label-printer/squix/",
   },
 ];
 

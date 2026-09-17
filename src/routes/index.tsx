@@ -18,12 +18,14 @@ import {
 } from "lucide-react";
 import hero from "@/assets/hero-gps-generic.png";
 import etiquettesBackground from "@/assets/bg-etiquettes-adhesives.png";
-import rubansBackground from "@/assets/bg-rubans-thermiques.png";
+import rubansInfographic from "@/assets/rubans-transfert-thermique-wax-resin.png";
 import imprimanteEtiquettesAsset from "@/assets/gps-solutions-banner.png.asset.json";
 
 const imprimanteEtiquettes = imprimanteEtiquettesAsset.url;
 import { Section } from "@/components/Section";
-import { CONTACT, devisMailto, marques, secteurs, services, whatsappHref } from "@/data/catalogue";
+import { BrandLogo } from "@/components/BrandLogo";
+import { CONTACT, devisMailto, secteurs, services, whatsappHref } from "@/data/catalogue";
+import type { BrandName } from "@/components/BrandLogo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -113,26 +115,7 @@ const famillesEtiquettes = [
   "Transparentes & sur mesure",
 ];
 
-const technologiesRubans = [
-  {
-    nom: "WAX",
-    type: "Cire",
-    texte: "La solution économique et rapide pour les applications standards sur papier.",
-    points: ["Qualité code-barres", "Vitesse élevée", "Logistique & usages généraux"],
-  },
-  {
-    nom: "WAX/RESIN",
-    type: "Cire / Résine",
-    texte: "Une impression polyvalente avec une meilleure résistance au frottement.",
-    points: ["Excellente définition", "Papier couché", "Supports synthétiques compatibles"],
-  },
-  {
-    nom: "RESIN",
-    type: "Résine",
-    texte: "La haute résistance destinée aux environnements industriels les plus exigeants.",
-    points: ["Chimie, chaleur & abrasion", "Résistance élevée", "Supports PET, PP & PE"],
-  },
-];
+const marquesAffichees: BrandName[] = ["Zebra", "Avery Dennison", "POSTEK", "CAB", "SATO", "TSC"];
 
 const preuves = [
   {
@@ -257,16 +240,16 @@ function Index() {
         <div className="border-t border-border/60 bg-deep">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-8 gap-y-4 px-5 py-5 lg:px-8">
             <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-              Marques & technologies proposées
+              Marques & technologies proposées selon disponibilité
             </span>
 
-            {marques.map((m) => (
-              <span
+            {marquesAffichees.map((m) => (
+              <div
                 key={m}
-                className="font-display text-sm font-bold tracking-wide text-foreground/90"
+                className="flex h-12 min-w-36 items-center justify-center rounded-xl border border-white/10 bg-white px-4 py-2 shadow-sm"
               >
-                {m}
-              </span>
+                <BrandLogo marque={m} className="h-8 max-w-40 object-contain" />
+              </div>
             ))}
           </div>
         </div>
@@ -335,14 +318,7 @@ function Index() {
               </div>
             </article>
 
-            <article className="group relative overflow-hidden rounded-3xl border border-white/20 bg-transparent p-6 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
-              <img
-                src={rubansBackground}
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-95 brightness-115 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-background/45 via-background/15 to-transparent" />
+            <article className="group relative overflow-hidden rounded-3xl border border-white/20 bg-[#061221] p-6 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
               <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
                 03
               </div>
@@ -361,27 +337,16 @@ function Index() {
                   application.
                 </p>
 
-                <div className="mt-8 grid gap-4 lg:grid-cols-3">
-                  {technologiesRubans.map((ruban) => (
-                    <div
-                      key={ruban.nom}
-                      className="rounded-2xl border border-white/25 bg-background/5 p-5 shadow-sm backdrop-blur-md transition-colors group-hover:bg-background/10"
-                    >
-                      <p className="font-display text-xl font-extrabold text-accent">{ruban.nom}</p>
-                      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-foreground/85">
-                        {ruban.type}
-                      </p>
-                      <p className="mt-4 text-sm leading-relaxed text-foreground/95">{ruban.texte}</p>
-                      <ul className="mt-4 space-y-2 text-xs text-foreground/90">
-                        {ruban.points.map((point) => (
-                          <li key={point} className="border-l border-accent/60 pl-3">
-                            {point}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
+                <figure className="mt-8 overflow-hidden rounded-2xl border border-white/20 bg-[#07172a] shadow-xl">
+                  <img
+                    src={rubansInfographic}
+                    alt="Comparatif des rubans transfert thermique WAX, WAX/RESIN et RESIN"
+                    loading="lazy"
+                    width={1340}
+                    height={1182}
+                    className="h-auto w-full object-contain"
+                  />
+                </figure>
 
                 <div className="mt-6 flex flex-wrap gap-2">
                   {[

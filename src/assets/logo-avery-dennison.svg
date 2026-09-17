@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" role="img" aria-labelledby="title">
+  <title id="title">Avery Dennison</title>
+  <rect width="360" height="90" rx="14" fill="#fff"/>
+  <g fill="none" stroke="#e2231a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 63 53 22l24 41H28Z"/>
+    <path d="M39 63 53 40l14 23"/>
+  </g>
+  <text x="94" y="45" fill="#151515" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" letter-spacing=".6">AVERY</text>
+  <text x="94" y="68" fill="#151515" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="2">DENNISON</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 90" role="img" aria-labelledby="title">
+  <title id="title">Zebra Technologies</title>
+  <rect width="310" height="90" rx="14" fill="#fff"/>
+  <g fill="#111827">
+    <path d="M29 19h39l-9 9H35l-6-9Zm2 15h25l-7 8H29l2-8Zm-4 15h20l-7 8H25l2-8Zm1 15h20l9 8H32l-4-8Z"/>
+    <circle cx="61" cy="48" r="4"/>
+    <path d="M50 42 71 27l-3 38-18-23Z"/>
+  </g>
+  <text x="91" y="57" fill="#111827" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="800" letter-spacing="1">ZEBRA</text>
+</svg>

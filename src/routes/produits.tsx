@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ExternalLink, FileText, Mail, MessageCircle } from "lucide-react";
 import { PageHero, Section } from "@/components/Section";
+import { BrandLogo } from "@/components/BrandLogo";
 import { marques, produits, devisMailto, whatsappHref, type Marque } from "@/data/catalogue";
 
 export const Route = createFileRoute("/produits")({
@@ -91,9 +92,7 @@ function ProduitsPage() {
                 <div className="p-6 sm:p-8">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div>
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">
-                        {p.marque}
-                      </span>
+                      <BrandLogo marque={p.marque} className="h-9 max-w-44 object-contain rounded-md" />
                       <h2 className="mt-2 font-display text-2xl font-extrabold text-foreground sm:text-3xl">
                         {p.modele}
                       </h2>
