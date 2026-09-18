@@ -50,3 +50,7 @@ Une tentative d'installation des dépendances avec npm a dépassé le délai dis
 - Calibration individuelle de la taille optique des sept marques.
 - Réduction de TSC et agrandissement équilibré des autres logos.
 - Correction de « TECHNOLOGYS » en « TECHNOLOGIES » dans la version anglaise.
+# Version 18 — agrandissement cab et SATO
+
+- Recadrage interne des SVG cab et SATO pour supprimer l'espace transparent inutile.
+- Agrandissement de leur taille optique afin de les aligner visuellement avec Zebra et POSTEK.
