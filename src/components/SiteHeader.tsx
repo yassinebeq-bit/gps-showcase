@@ -37,17 +37,25 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-xl">
-      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-2.5 sm:py-3 lg:px-8">
+      <div className="mx-auto grid max-w-[1600px] grid-cols-[minmax(0,1fr)_auto] items-center gap-5 px-5 py-2.5 sm:py-3 lg:px-8">
         <Link to="/" className="min-w-0" onClick={() => setOpen(false)}>
           <Logo />
         </Link>
 
         <div className="flex items-center gap-2">
           <nav className="hidden items-center gap-1 lg:flex">
+            <Link
+              to="/"
+              className="rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              activeProps={{ className: "bg-secondary text-foreground" }}
+              activeOptions={{ exact: true }}
+            >
+              Accueil
+            </Link>
             <div className="group relative">
               <Link
                 to="/produits"
-                className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                 activeProps={{ className: "bg-secondary text-foreground" }}
               >
                 Produits <ChevronDown className="h-4 w-4" />
@@ -81,11 +89,11 @@ export function SiteHeader() {
                 </div>
               </div>
             </div>
-            {nav.map((n) => (
+            {nav.filter((n) => n.to !== "/").map((n) => (
               <Link
                 key={n.to}
                 to={n.to}
-                className="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                className="rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                 activeProps={{ className: "bg-secondary text-foreground" }}
                 activeOptions={{ exact: n.to === "/" }}
               >
@@ -93,21 +101,14 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
-          <div className="hidden items-center gap-2 xl:flex">
-            <a
-              href={CONTACT.telHref}
-              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
-            >
-              <Phone className="h-4 w-4 text-accent" />
-              {CONTACT.tel}
-            </a>
-            <a
-              href={CONTACT.mobileHref}
-              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
-            >
-              <Phone className="h-4 w-4 text-accent" />
-              {CONTACT.mobile}
-            </a>
+          <div className="hidden xl:flex">
+            <div className="flex items-center gap-2.5 rounded-2xl border border-border px-3 py-1.5 text-foreground transition-colors hover:bg-secondary">
+              <Phone className="h-4 w-4 shrink-0 text-accent" />
+              <div className="flex flex-col text-[12px] font-medium leading-[1.35]">
+                <a href={CONTACT.telHref} className="hover:text-accent">{CONTACT.tel}</a>
+                <a href={CONTACT.mobileHref} className="hover:text-accent">{CONTACT.mobile}</a>
+              </div>
+            </div>
           </div>
           <a
             href={devisMailto()}
@@ -137,6 +138,15 @@ export function SiteHeader() {
 
       {open && (
         <nav className="border-t border-border/60 bg-background px-5 py-3 lg:hidden">
+          <Link
+            to="/"
+            onClick={() => setOpen(false)}
+            className="block rounded-lg px-3 py-3 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground"
+            activeProps={{ className: "text-foreground" }}
+            activeOptions={{ exact: true }}
+          >
+            Accueil
+          </Link>
           <details className="group rounded-lg">
             <summary className="flex cursor-pointer list-none items-center justify-between rounded-lg px-3 py-3 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground">
               Produits{" "}
@@ -155,7 +165,7 @@ export function SiteHeader() {
               ))}
             </div>
           </details>
-          {nav.map((n) => (
+          {nav.filter((n) => n.to !== "/").map((n) => (
             <Link
               key={n.to}
               to={n.to}

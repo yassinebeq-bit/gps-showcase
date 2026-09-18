@@ -211,10 +211,10 @@ function Index() {
             <img
               src={hero}
               alt="Imprimantes d'étiquettes, lecteurs code-barres et RFID avec consommables"
-              className="absolute inset-0 h-full w-full object-contain object-center"
+              className="absolute inset-0 h-full w-full object-cover object-[58%_center]"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-background/30 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/55 via-background/10 to-transparent" />
 
             <div className="absolute bottom-7 right-7 hidden rounded-2xl border border-white/10 bg-background/70 px-5 py-4 backdrop-blur-md md:block">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
