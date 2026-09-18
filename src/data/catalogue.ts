@@ -1,10 +1,3 @@
-import printer from "@/assets/prod-printer.jpg";
-import scanner from "@/assets/prod-scanner.jpg";
-import applicator from "@/assets/prod-applicator.jpg";
-import consumables from "@/assets/prod-consumables.jpg";
-import mobile from "@/assets/prod-mobile.jpg";
-import textile from "@/assets/prod-textile.jpg";
-
 export type Marque = "Zebra" | "Avery Dennison" | "POSTEK" | "CAB";
 
 export type Produit = {
@@ -14,7 +7,6 @@ export type Produit = {
   categorie: string;
   description: string;
   points: string[];
-  image: string;
   ficheUrl?: string;
   specs?: { label: string; valeur: string }[];
 };
@@ -34,7 +26,6 @@ export const produits: Produit[] = [
       "Écran couleur tactile",
       "Châssis métallique intensif",
     ],
-    image: printer,
     ficheUrl: "https://www.zebra.com/gb/en/products/printers/industrial/zt600-series/zt610.html",
     specs: [
       { label: "Technologie", valeur: "Thermique direct / transfert thermique" },
@@ -55,7 +46,6 @@ export const produits: Produit[] = [
       "Écran tactile couleur",
       "Connectivité filaire et sans fil",
     ],
-    image: printer,
     ficheUrl: "https://www.zebra.com/us/en/products/printers/industrial/zt400-series/zt411.html",
     specs: [
       { label: "Technologie", valeur: "Thermique direct / transfert thermique" },
@@ -76,7 +66,6 @@ export const produits: Produit[] = [
       "Résolution 203 dpi",
       "Conception durcie, autonomie longue",
     ],
-    image: mobile,
   },
   {
     id: "zebra-mc3300",
@@ -86,7 +75,6 @@ export const produits: Produit[] = [
     description:
       "Terminal mobile durci pour l'inventaire, la réception et la préparation de commandes avec lecture de codes-barres.",
     points: ["Lecture codes-barres 1D / 2D", "Écran tactile Android", "Usage intensif en entrepôt"],
-    image: scanner,
   },
   {
     id: "avery-snap-500",
@@ -100,7 +88,6 @@ export const produits: Produit[] = [
       "Résolution 300 dpi",
       "Étiquettes d'entretien et de taille",
     ],
-    image: textile,
   },
   {
     id: "avery-adtp2",
@@ -110,7 +97,6 @@ export const produits: Produit[] = [
     description:
       "Imprimante d'étiquettes et d'étiquettes cartonnées pour l'identification logistique, le marquage produit et le retail.",
     points: ["Codes-barres 1D / 2D", "Résolution 203 / 300 dpi", "Supports papier et carton"],
-    image: printer,
   },
   {
     id: "avery-als306",
@@ -120,7 +106,6 @@ export const produits: Produit[] = [
     description:
       "Système d'application automatique d'étiquettes intégrable sur ligne de conditionnement et convoyeur.",
     points: ["Pose automatique en ligne", "Cadence industrielle", "Intégration sur machine"],
-    image: applicator,
   },
   {
     id: "postek-em210",
@@ -130,7 +115,6 @@ export const produits: Produit[] = [
     description:
       "Imprimante compacte pour l'étiquetage au poste de travail : expédition, réception et contrôle qualité.",
     points: ["Résolution 203 dpi", "Format compact", "Codes-barres 1D / 2D"],
-    image: printer,
     ficheUrl: "https://www.postekchina.com/product_E/",
   },
   {
@@ -141,7 +125,6 @@ export const produits: Produit[] = [
     description:
       "Imprimante industrielle haute définition pour les petites étiquettes et les marquages techniques détaillés.",
     points: ["Résolution 300 dpi", "Châssis industriel", "Impression fine et régulière"],
-    image: printer,
     ficheUrl: "https://postekus.com/product_TX/",
   },
   {
@@ -152,7 +135,6 @@ export const produits: Produit[] = [
     description:
       "Imprimante industrielle polyvalente pour les volumes moyens en production, logistique et agroalimentaire.",
     points: ["Résolution 203 dpi", "Écran tactile couleur", "Utilisation continue"],
-    image: printer,
   },
   {
     id: "postek-zx3",
@@ -162,7 +144,6 @@ export const produits: Produit[] = [
     description:
       "Imprimante industrielle robuste pour l'étiquetage intensif de cartons et de palettes en fin de ligne.",
     points: ["Résolution 300 dpi", "Écran tactile", "Grande capacité de rouleau"],
-    image: printer,
   },
   {
     id: "postek-gx3",
@@ -172,7 +153,6 @@ export const produits: Produit[] = [
     description:
       "Imprimante industrielle conçue pour les ateliers de production nécessitant précision et fiabilité au quotidien.",
     points: ["Résolution 203 / 300 dpi", "Mécanique renforcée", "Maintenance simplifiée"],
-    image: printer,
   },
   {
     id: "postek-g6000",
@@ -186,7 +166,6 @@ export const produits: Produit[] = [
       "Largeur d'impression jusqu'à 104 mm",
       "Impression de haute précision",
     ],
-    image: printer,
     ficheUrl: "https://www.postekus.com/product_G/",
   },
   {
@@ -197,7 +176,6 @@ export const produits: Produit[] = [
     description:
       "Étiquettes adhésives, étiquettes textiles et rubans transfert thermique sélectionnés selon le support et l'environnement.",
     points: ["Formats sur mesure", "Adhésifs spécifiques", "Rubans cire, mixte, résine"],
-    image: consumables,
   },
   {
     id: "cab-squix-4",
@@ -206,8 +184,11 @@ export const produits: Produit[] = [
     categorie: "Impression industrielle",
     description:
       "Imprimante industrielle polyvalente pour l'identification de produits, composants, cartons et palettes.",
-    points: ["Largeur d'impression 4 pouces", "Écran tactile couleur", "Nombreuses interfaces et options"],
-    image: printer,
+    points: [
+      "Largeur d'impression 4 pouces",
+      "Écran tactile couleur",
+      "Nombreuses interfaces et options",
+    ],
     ficheUrl: "https://www.cab.de/en/marking/label-printer/squix/",
   },
 ];
