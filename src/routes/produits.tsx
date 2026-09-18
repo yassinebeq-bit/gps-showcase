@@ -78,6 +78,39 @@ const familles = [
   },
 ] as const;
 
+const typesEtiquettes = [
+  [
+    "Papier couché et thermique",
+    "Pour la logistique, l'expédition, le retail et les usages courants.",
+  ],
+  [
+    "Polypropylène (PP)",
+    "Support synthétique résistant à l'humidité et adapté aux surfaces exigeantes.",
+  ],
+  ["Polyester (PET)", "Pour les applications industrielles demandant résistance et longue durée."],
+  ["Polyéthylène (PE)", "Support souple pour emballages et contenants soumis aux déformations."],
+  [
+    "Eau et produits chimiques",
+    "Matières et adhésifs sélectionnés pour les environnements difficiles.",
+  ],
+  ["Haute et basse température", "Solutions adaptées au froid, à la congélation et à la chaleur."],
+  [
+    "Sécurité, VOID et destructibles",
+    "Pour le contrôle d'ouverture, la garantie et l'inviolabilité.",
+  ],
+  ["Étiquettes RFID", "Identification sans contact, inventaire et traçabilité automatisée."],
+  ["Logistique et codes-barres", "Étiquetage des colis, palettes, emplacements et produits."],
+  ["Textile et automobile", "Supports techniques adaptés aux contraintes de production."],
+  [
+    "Agroalimentaire et pharmaceutique",
+    "Solutions étudiées selon les conditions d'usage et de stockage.",
+  ],
+  [
+    "Transparentes et sur mesure",
+    "Formats, formes, matières et adhésifs personnalisés selon le besoin.",
+  ],
+] as const;
+
 function categorieId(categorie: string) {
   if (categorie.includes("Terminaux")) return "terminaux";
   if (categorie.includes("automatique")) return "automatisation";
@@ -102,7 +135,50 @@ function ProduitsPage() {
       />
 
       <Section>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          id="etiquettes"
+          className="scroll-mt-28 rounded-3xl border border-border bg-card/55 p-6 sm:p-8"
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+            Supports d'identification
+          </p>
+          <h2 className="mt-3 font-display text-2xl font-extrabold text-foreground sm:text-3xl">
+            Nos différents types d'étiquettes
+          </h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
+            La matière et l'adhésif sont sélectionnés selon le support, la température,
+            l'environnement et la durée d'utilisation.
+          </p>
+          <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {typesEtiquettes.map(([titre, texte]) => (
+              <article
+                key={titre}
+                className="rounded-2xl border border-border bg-background/45 p-5"
+              >
+                <h3 className="font-display font-bold text-foreground">{titre}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{texte}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a
+              href={devisMailto("Étiquettes adhésives")}
+              className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground shadow-brand"
+            >
+              <Mail className="h-4 w-4" /> Demander un devis
+            </a>
+            <a
+              href={whatsappHref("Étiquettes adhésives")}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-[#25D366]/60 px-5 py-3 text-sm font-semibold text-foreground"
+            >
+              <MessageCircle className="h-4 w-4 text-[#25D366]" /> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {familles.map(({ id, titre, texte, icone: Icone }) => (
             <a
               key={id}

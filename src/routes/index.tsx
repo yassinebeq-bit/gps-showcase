@@ -11,7 +11,6 @@ import {
   Radio,
   ScanLine,
   ShieldCheck,
-  Tags,
   Workflow,
   Wrench,
   MessageCircle,
@@ -101,18 +100,6 @@ const solutions = [
       "Support & pièces de rechange",
     ],
   },
-];
-
-const famillesEtiquettes = [
-  "Papier couché & thermique",
-  "PP, PET & PE",
-  "Résistantes eau & chimie",
-  "Haute & basse température",
-  "Sécurité, VOID & RFID",
-  "Logistique & codes-barres",
-  "Textile & automobile",
-  "Agroalimentaire & pharma",
-  "Transparentes & sur mesure",
 ];
 
 const marquesAffichees: BrandName[] = ["Zebra", "Avery Dennison", "POSTEK", "CAB", "SATO", "TSC"];
@@ -272,23 +259,17 @@ function Index() {
           </div>
 
           <div className="mt-12 grid gap-5 lg:grid-cols-2">
-            <article className="group relative overflow-hidden rounded-3xl border border-white/20 bg-transparent p-6 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:p-8 lg:col-span-2">
+            <article className="group relative min-h-[480px] overflow-hidden rounded-3xl border border-white/20 bg-[#061221] p-6 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:min-h-[520px] sm:p-8 lg:col-span-2">
               <img
                 src={etiquettesBackground}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-95 brightness-115 contrast-105 transition-transform duration-700 group-hover:scale-[1.02]"
+                className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.01]"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-background/45 via-background/15 to-transparent" />
-              <div className="absolute right-6 top-5 font-display text-6xl font-extrabold text-accent/10 sm:text-8xl">
-                02
-              </div>
-              <div className="relative grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-                <div>
-                  <div className="grid h-12 w-12 place-items-center rounded-xl border border-accent/25 bg-accent/10 backdrop-blur-sm">
-                    <Tags className="h-6 w-6 text-accent" />
-                  </div>
-                  <p className="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#061221]/85 via-[#061221]/25 to-transparent lg:via-transparent" />
+              <div className="relative flex min-h-[420px] items-center sm:min-h-[456px]">
+                <div className="max-w-xl">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
                     02 — Famille stratégique
                   </p>
                   <h3 className="mt-3 font-display text-2xl font-bold text-foreground sm:text-3xl">
@@ -298,22 +279,12 @@ function Index() {
                     Des matières, adhésifs et formats sélectionnés selon le support, la température,
                     l'environnement et la durée d'utilisation.
                   </p>
-                  <Link
-                    to="/produits"
-                    className="mt-7 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/15 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+                  <a
+                    href="/produits#etiquettes"
+                    className="mt-7 inline-flex items-center gap-2 rounded-full border border-accent/60 bg-background/30 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-accent hover:text-accent-foreground"
                   >
                     Découvrir nos étiquettes <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                  {famillesEtiquettes.map((famille) => (
-                    <div
-                      key={famille}
-                      className="flex min-h-20 items-center rounded-xl border border-white/25 bg-background/5 p-4 text-sm font-medium leading-snug text-foreground shadow-sm backdrop-blur-md transition-colors group-hover:border-accent/40 group-hover:bg-background/10"
-                    >
-                      {famille}
-                    </div>
-                  ))}
+                  </a>
                 </div>
               </div>
             </article>
