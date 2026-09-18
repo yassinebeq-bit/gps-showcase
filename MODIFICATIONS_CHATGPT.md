@@ -36,3 +36,10 @@ Version de travail préparée à partir du ZIP Lovable/GitHub fourni le 09/09/20
 ## Validation
 
 Une tentative d'installation des dépendances avec npm a dépassé le délai disponible dans l'environnement, donc le build Vite n'a pas pu être exécuté ici. Le code a été vérifié structurellement et les anciennes références d'assets Lovable utilisées sur la page d'accueil ont été supprimées.
+# Version 16 — site bilingue FR / EN
+
+- Ajout d'un sélecteur FR / EN dans le header, visible sur ordinateur et mobile.
+- Mémorisation de la langue choisie dans le navigateur.
+- Traduction de l'accueil, des produits, des secteurs, des services, du contact, du footer et de la politique de confidentialité.
+- Traduction des textes SEO, attributs d'accessibilité, messages WhatsApp et demandes de devis par e-mail.
+- Conservation des URL existantes afin de ne pas casser les liens déjà diffusés.

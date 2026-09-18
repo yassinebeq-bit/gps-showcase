@@ -5,8 +5,9 @@ import postekLogo from "@/assets/logo-postek.svg";
 import cabLogo from "@/assets/logo-cab.svg";
 import satoLogo from "@/assets/logo-sato.svg";
 import tscLogo from "@/assets/logo-tsc-official.svg";
+import opticonLogo from "@/assets/logo-opticon-official.svg";
 
-export type BrandName = Marque | "SATO" | "TSC";
+export type BrandName = Marque | "SATO" | "TSC" | "OPTICON";
 
 const logos: Record<BrandName, string> = {
   Zebra: zebraLogo,
@@ -15,6 +16,7 @@ const logos: Record<BrandName, string> = {
   CAB: cabLogo,
   SATO: satoLogo,
   TSC: tscLogo,
+  OPTICON: opticonLogo,
 };
 
 type BrandLogoProps = {

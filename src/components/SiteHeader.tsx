@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronRight, Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
 import { CONTACT, devisMailto, whatsappHref } from "@/data/catalogue";
+import { LanguageSwitcher } from "@/i18n";
 
 const nav = [
   { to: "/", label: "Accueil" },
@@ -101,6 +102,7 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
+          <LanguageSwitcher compact />
           <div className="hidden xl:flex">
             <div className="flex items-center gap-2.5 rounded-2xl border border-border px-3 py-1.5 text-foreground transition-colors hover:bg-secondary">
               <Phone className="h-4 w-4 shrink-0 text-accent" />

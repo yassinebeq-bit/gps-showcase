@@ -1,3 +1,5 @@
+import { getStoredLanguage } from "@/i18n";
+
 export type Marque = "Zebra" | "Avery Dennison" | "POSTEK" | "CAB";
 
 export type Produit = {
@@ -206,16 +208,30 @@ export const CONTACT = {
 };
 
 export function whatsappHref(produit?: string) {
-  const message = produit
-    ? `Bonjour, je souhaite recevoir des informations et un devis concernant : ${produit}.`
-    : "Bonjour, je souhaite échanger avec GPS au sujet d'une solution d'identification et de traçabilité.";
+  const english = getStoredLanguage() === "en";
+  const message = english
+    ? produit
+      ? `Hello, I would like information and a quotation for: ${produit}.`
+      : "Hello, I would like to discuss an identification and traceability solution with GPS."
+    : produit
+      ? `Bonjour, je souhaite recevoir des informations et un devis concernant : ${produit}.`
+      : "Bonjour, je souhaite échanger avec GPS au sujet d'une solution d'identification et de traçabilité.";
   return `https://wa.me/212663197938?text=${encodeURIComponent(message)}`;
 }
 
 export function devisMailto(produit?: string) {
-  const sujet = produit
-    ? `Demande de devis — ${produit}`
-    : "Demande de devis — Global Performance Services";
+  const english = getStoredLanguage() === "en";
+  const sujet = english
+    ? produit ? `Quotation request — ${produit}` : "Quotation request — Global Performance Services"
+    : produit ? `Demande de devis — ${produit}` : "Demande de devis — Global Performance Services";
+  if (english) {
+    const body = [
+      "Hello,", "", produit ? `I would like a quotation for: ${produit}.` : "I would like a quotation for your identification and traceability solutions.",
+      "", "Company: ", "Industry: ", "Requirement / application: ", "Estimated quantity: ", "Contact person: ", "Telephone: ",
+      "", "Please contact me.", "", "Kind regards,",
+    ].join("\n");
+    return `mailto:${CONTACT.email}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(body)}`;
+  }
   const corps = [
     "Bonjour,",
     "",

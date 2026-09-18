@@ -103,7 +103,15 @@ const solutions = [
   },
 ];
 
-const marquesAffichees: BrandName[] = ["Zebra", "Avery Dennison", "POSTEK", "CAB", "SATO", "TSC"];
+const marquesAffichees: BrandName[] = [
+  "Avery Dennison",
+  "Zebra",
+  "POSTEK",
+  "CAB",
+  "SATO",
+  "TSC",
+  "OPTICON",
+];
 
 const preuves = [
   {
@@ -226,19 +234,39 @@ function Index() {
 
         {/* BANDE MARQUES */}
         <div className="border-t border-border/60 bg-deep">
-          <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-8 gap-y-4 px-5 py-5 lg:px-8">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-              Marques et technologies disponibles selon les besoins
-            </span>
+          <div className="mx-auto grid max-w-[1600px] gap-7 px-5 py-8 lg:grid-cols-[minmax(230px,0.8fr)_minmax(0,2.5fr)] lg:items-center lg:gap-10 lg:px-8 lg:py-10">
+            <div>
+              <div className="h-0.5 w-12 bg-accent" />
+              <h2 className="mt-4 max-w-xs text-sm font-semibold uppercase leading-relaxed tracking-[0.2em] text-foreground sm:text-base">
+                Technologies adaptées à vos besoins
+              </h2>
+            </div>
 
-            {marquesAffichees.map((m) => (
-              <div
-                key={m}
-                className="flex h-12 min-w-36 items-center justify-center rounded-xl border border-white/10 bg-white px-4 py-2 shadow-sm"
-              >
-                <BrandLogo marque={m} className="h-8 max-w-40 object-contain" />
+            <div>
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-7 xl:gap-0">
+                {marquesAffichees.map((marque, index) => (
+                  <div key={marque} className="relative xl:px-2">
+                    <div className="flex h-20 items-center justify-center rounded-lg border border-slate-200/80 bg-[#f7f8fa] px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-transform duration-200 hover:-translate-y-0.5">
+                      <BrandLogo
+                        marque={marque}
+                        className="max-h-11 w-full max-w-[145px] object-contain"
+                      />
+                    </div>
+                    {index < marquesAffichees.length - 1 && (
+                      <span
+                        aria-hidden="true"
+                        className="absolute -right-px top-1/2 hidden h-8 w-px -translate-y-1/2 bg-accent/65 xl:block"
+                      />
+                    )}
+                  </div>
+                ))}
               </div>
-            ))}
+
+              <p className="mt-5 text-[10px] leading-relaxed text-muted-foreground sm:text-[11px]">
+                Marques présentées à titre indicatif. GPS est une entreprise indépendante, sans
+                affiliation officielle avec les fabricants mentionnés, sauf indication contraire.
+              </p>
+            </div>
           </div>
         </div>
       </section>
