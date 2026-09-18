@@ -19,17 +19,17 @@ const productMenu = [
   },
   {
     label: "Lecteurs code-barres",
-    href: "/produits#lecture",
+    href: "/produits#lecteurs",
     children: ["Filaires", "Sans fil", "Durcis 1D / 2D"],
   },
   { label: "Terminaux mobiles", href: "/produits#terminaux", children: [] },
   { label: "Étiquetage automatique", href: "/produits#automatisation", children: [] },
   {
     label: "Consommables",
-    href: "/produits#consommables",
+    href: "/produits#etiquettes",
     children: ["Étiquettes adhésives", "Rubans transfert thermique"],
   },
-  { label: "RFID & logiciels", href: "/produits#rfid", children: [] },
+  { label: "RFID & logiciels", href: "/produits#logiciels", children: [] },
 ] as const;
 
 export function SiteHeader() {
