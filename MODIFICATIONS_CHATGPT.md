@@ -54,3 +54,7 @@ Une tentative d'installation des dépendances avec npm a dépassé le délai dis
 
 - Recadrage interne des SVG cab et SATO pour supprimer l'espace transparent inutile.
 - Agrandissement de leur taille optique afin de les aligner visuellement avec Zebra et POSTEK.
+# Version 19 — correction du logo POSTEK
+
+- Recadrage interne du SVG POSTEK pour éliminer les marges transparentes.
+- Agrandissement du logo afin d'obtenir un poids visuel cohérent avec les autres marques.

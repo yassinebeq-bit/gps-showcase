@@ -28,7 +28,7 @@ type BrandLogoProps = {
 const showcaseSizes: Record<BrandName, string> = {
   "Avery Dennison": "max-h-12 max-w-[138px]",
   Zebra: "max-h-12 max-w-[132px]",
-  POSTEK: "max-h-11 max-w-[132px]",
+  POSTEK: "max-h-12 max-w-[145px]",
   CAB: "max-h-12 max-w-[138px]",
   SATO: "max-h-12 max-w-[138px]",
   TSC: "max-h-10 max-w-[122px]",
