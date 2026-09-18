@@ -326,29 +326,30 @@ function Index() {
           </article>
 
           <div className="mt-12 grid gap-5 lg:grid-cols-2">
-            <article className="group relative min-h-[480px] overflow-hidden rounded-3xl border border-white/20 bg-[#061221] p-6 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:min-h-[520px] sm:p-8 lg:col-span-2">
+            <article className="group relative min-h-[440px] overflow-hidden rounded-3xl border border-white/20 bg-[#061221] p-5 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:min-h-[520px] sm:p-8 lg:col-span-2">
               <img
                 src={etiquettesBackground}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.01]"
+                className="absolute inset-0 h-full w-full object-cover object-[64%_center] transition-transform duration-700 group-hover:scale-[1.01] sm:object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#061221]/85 via-[#061221]/25 to-transparent lg:via-transparent" />
-              <div className="relative flex min-h-[420px] items-center sm:min-h-[456px]">
-                <div className="max-w-xl">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#061221]/95 via-[#061221]/72 to-[#061221]/25 sm:from-[#061221]/85 sm:via-[#061221]/25 sm:to-transparent lg:via-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#061221]/45 via-transparent to-[#061221]/15 sm:hidden" />
+              <div className="relative flex min-h-[400px] items-center sm:min-h-[456px]">
+                <div className="max-w-[22rem] sm:max-w-xl">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-accent sm:text-xs sm:tracking-[0.24em]">
                     02 — Famille stratégique
                   </p>
                   <h3 className="mt-3 font-display text-2xl font-bold text-foreground sm:text-3xl">
                     Étiquettes adhésives
                   </h3>
-                  <p className="mt-4 max-w-xl text-sm leading-relaxed text-foreground/90 sm:text-base">
+                  <p className="mt-4 max-w-[20rem] text-[0.95rem] leading-relaxed text-foreground/95 sm:max-w-xl sm:text-base">
                     Des matières, adhésifs et formats sélectionnés selon le support, la température,
                     l'environnement et la durée d'utilisation.
                   </p>
                   <a
                     href="/produits#etiquettes"
-                    className="mt-7 inline-flex items-center gap-2 rounded-full border border-accent/60 bg-background/30 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+                    className="mt-6 inline-flex max-w-full items-center gap-2 rounded-full border border-accent/70 bg-[#061221]/70 px-4 py-2.5 text-xs font-semibold text-foreground backdrop-blur-md transition-colors hover:bg-accent hover:text-accent-foreground sm:mt-7 sm:px-5 sm:py-3 sm:text-sm"
                   >
                     Découvrir nos étiquettes <ArrowRight className="h-4 w-4" />
                   </a>

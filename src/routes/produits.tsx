@@ -9,7 +9,7 @@ import imageImprimantes from "@/assets/prod-printer.jpg";
 import imageLecteurs from "@/assets/prod-scanner.jpg";
 import imageTerminaux from "@/assets/prod-mobile.jpg";
 import imageEtiquettes from "@/assets/bg-etiquettes-adhesives.png";
-import imageRubans from "@/assets/prod-consumables.jpg";
+import imageRubans from "@/assets/bg-rubans-thermiques.png";
 import imageTextile from "@/assets/prod-textile.jpg";
 import imageAutomatisation from "@/assets/prod-applicator.jpg";
 import imageLogiciels from "@/assets/prod-software.jpg";
@@ -68,7 +68,7 @@ const familles = [
   {
     id: "rubans", filtre: "consommables", titre: "Rubans transfert thermique",
     description: "Des formulations adaptées au support, à la vitesse d'impression et au niveau de résistance recherché.",
-    image: imageRubans, alt: "Rouleaux d'étiquettes et rubans transfert thermique",
+    image: imageRubans, alt: "Rubans transfert thermique noirs de différents formats",
     tags: ["Wax", "Wax/Resin", "Resin", "Near Edge"],
     applications: ["Papier", "Supports couchés", "Films synthétiques", "Textile"],
   },
