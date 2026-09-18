@@ -259,28 +259,28 @@ function Index() {
             </p>
           </div>
 
-          <article className="relative mt-12 min-h-[680px] overflow-hidden rounded-3xl border border-white/15 bg-[#031326] shadow-card sm:min-h-[720px] lg:min-h-[660px]">
+          <article className="relative mt-12 overflow-hidden rounded-3xl border border-white/15 bg-[#031326] shadow-card lg:min-h-[660px]">
             <img
               src={serviceTechniqueBackground}
               alt="Technicien GPS assurant la maintenance d'une imprimante d'étiquettes industrielle"
               loading="lazy"
               width={1728}
               height={900}
-              className="absolute inset-0 h-full w-full object-cover object-[62%_center] sm:object-[58%_center] lg:object-center"
+              className="absolute inset-0 hidden h-full w-full object-cover object-center lg:block"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#031326] via-[#031326]/90 to-[#031326]/20 lg:via-[#031326]/75 lg:to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#031326] via-transparent to-[#031326]/10" />
+            <div className="absolute inset-0 hidden bg-gradient-to-r from-[#031326] via-[#031326]/75 to-transparent lg:block" />
+            <div className="absolute inset-0 hidden bg-gradient-to-t from-[#031326] via-transparent to-[#031326]/10 lg:block" />
 
-            <div className="relative flex min-h-[680px] flex-col justify-between p-6 sm:min-h-[720px] sm:p-9 lg:min-h-[660px] lg:p-12">
-              <div className="max-w-2xl pt-4 lg:max-w-[56%]">
+            <div className="relative flex flex-col lg:min-h-[660px] lg:justify-between lg:p-12">
+              <div className="max-w-2xl px-6 pb-7 pt-8 sm:px-9 sm:pb-9 sm:pt-10 lg:max-w-[56%] lg:p-0 lg:pt-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent sm:text-sm">
                   Service technique GPS
                 </p>
                 <div className="mt-4 h-px w-24 bg-accent" />
-                <h3 className="mt-7 font-display text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+                <h3 className="mt-6 font-display text-[2.35rem] font-extrabold leading-[1.12] text-white sm:mt-7 sm:text-5xl lg:text-6xl">
                   Vos équipements restent performants.
                 </h3>
-                <p className="mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
+                <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-white/75 sm:mt-6 sm:text-lg">
                   Installation, mise en service, maintenance, diagnostic et réparation de vos
                   solutions d'identification.
                 </p>
@@ -295,7 +295,19 @@ function Index() {
                 </a>
               </div>
 
-              <div className="mt-12 grid gap-x-6 gap-y-5 border-t border-white/15 pt-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="relative h-64 overflow-hidden border-y border-white/10 sm:h-80 lg:hidden">
+                <img
+                  src={serviceTechniqueBackground}
+                  alt="Technicien marocain intervenant sur une imprimante d'étiquettes"
+                  loading="lazy"
+                  width={1728}
+                  height={900}
+                  className="h-full w-full object-cover object-[72%_center]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#031326]/15 via-transparent to-[#031326]/35" />
+              </div>
+
+              <div className="grid grid-cols-2 gap-x-5 gap-y-5 px-6 py-7 sm:px-9 lg:mt-12 lg:grid-cols-4 lg:border-t lg:border-white/15 lg:px-0 lg:pb-0 lg:pt-6">
                 {[
                   { icone: PackageCheck, texte: "Installation & configuration" },
                   { icone: Wrench, texte: "Maintenance & dépannage" },
@@ -303,8 +315,8 @@ function Index() {
                   { icone: Boxes, texte: "Pièces de rechange" },
                 ].map(({ icone: Icone, texte }) => (
                   <div key={texte} className="flex items-center gap-3">
-                    <Icone className="h-6 w-6 shrink-0 text-accent" />
-                    <p className="text-sm font-semibold leading-snug text-white sm:text-base">
+                    <Icone className="h-5 w-5 shrink-0 text-accent sm:h-6 sm:w-6" />
+                    <p className="text-xs font-semibold leading-snug text-white sm:text-base">
                       {texte}
                     </p>
                   </div>
