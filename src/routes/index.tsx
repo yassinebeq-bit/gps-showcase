@@ -16,6 +16,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import hero from "@/assets/hero-gps-generic.png";
+import serviceTechniqueBackground from "@/assets/service-technique-gps.png";
 import etiquettesBackground from "@/assets/bg-etiquettes-adhesives.png";
 import rubansInfographic from "@/assets/rubans-transfert-thermique-wax-resin.png";
 import imprimanteEtiquettesAsset from "@/assets/gps-solutions-banner.png.asset.json";
@@ -257,6 +258,60 @@ function Index() {
               pour les environnements industriels.
             </p>
           </div>
+
+          <article className="relative mt-12 min-h-[680px] overflow-hidden rounded-3xl border border-white/15 bg-[#031326] shadow-card sm:min-h-[720px] lg:min-h-[660px]">
+            <img
+              src={serviceTechniqueBackground}
+              alt="Technicien GPS assurant la maintenance d'une imprimante d'étiquettes industrielle"
+              loading="lazy"
+              width={1728}
+              height={900}
+              className="absolute inset-0 h-full w-full object-cover object-[62%_center] sm:object-[58%_center] lg:object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#031326] via-[#031326]/90 to-[#031326]/20 lg:via-[#031326]/75 lg:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#031326] via-transparent to-[#031326]/10" />
+
+            <div className="relative flex min-h-[680px] flex-col justify-between p-6 sm:min-h-[720px] sm:p-9 lg:min-h-[660px] lg:p-12">
+              <div className="max-w-2xl pt-4 lg:max-w-[56%]">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent sm:text-sm">
+                  Service technique GPS
+                </p>
+                <div className="mt-4 h-px w-24 bg-accent" />
+                <h3 className="mt-7 font-display text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+                  Vos équipements restent performants.
+                </h3>
+                <p className="mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
+                  Installation, mise en service, maintenance, diagnostic et réparation de vos
+                  solutions d'identification.
+                </p>
+                <a
+                  href={whatsappHref("une intervention technique")}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-8 inline-flex items-center gap-3 rounded-full bg-accent px-6 py-3.5 text-sm font-bold text-accent-foreground shadow-brand transition-all hover:-translate-y-0.5 hover:brightness-110 sm:px-7 sm:text-base"
+                >
+                  Demander une intervention
+                  <ArrowRight className="h-5 w-5" />
+                </a>
+              </div>
+
+              <div className="mt-12 grid gap-x-6 gap-y-5 border-t border-white/15 pt-6 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  { icone: PackageCheck, texte: "Installation & configuration" },
+                  { icone: Wrench, texte: "Maintenance & dépannage" },
+                  { icone: ScanLine, texte: "Réparation & programmation" },
+                  { icone: Boxes, texte: "Pièces de rechange" },
+                ].map(({ icone: Icone, texte }) => (
+                  <div key={texte} className="flex items-center gap-3">
+                    <Icone className="h-6 w-6 shrink-0 text-accent" />
+                    <p className="text-sm font-semibold leading-snug text-white sm:text-base">
+                      {texte}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </article>
 
           <div className="mt-12 grid gap-5 lg:grid-cols-2">
             <article className="group relative min-h-[480px] overflow-hidden rounded-3xl border border-white/20 bg-[#061221] p-6 shadow-card transition-all hover:-translate-y-1 hover:border-accent/60 sm:min-h-[520px] sm:p-8 lg:col-span-2">
