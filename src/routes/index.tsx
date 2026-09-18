@@ -249,7 +249,8 @@ function Index() {
                     <div className="flex h-20 items-center justify-center rounded-lg border border-slate-200/80 bg-[#f7f8fa] px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-transform duration-200 hover:-translate-y-0.5">
                       <BrandLogo
                         marque={marque}
-                        className="max-h-11 w-full max-w-[145px] object-contain"
+                        showcase
+                        className="h-auto w-full object-contain"
                       />
                     </div>
                     {index < marquesAffichees.length - 1 && (

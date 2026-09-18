@@ -43,3 +43,10 @@ Une tentative d'installation des dépendances avec npm a dépassé le délai dis
 - Traduction de l'accueil, des produits, des secteurs, des services, du contact, du footer et de la politique de confidentialité.
 - Traduction des textes SEO, attributs d'accessibilité, messages WhatsApp et demandes de devis par e-mail.
 - Conservation des URL existantes afin de ne pas casser les liens déjà diffusés.
+# Version 17 — correction professionnelle du bandeau de logos
+
+- Suppression des doubles fonds blancs intégrés dans les logos POSTEK, cab et SATO.
+- Utilisation du visuel officiel Avery Dennison, recadré proprement.
+- Calibration individuelle de la taille optique des sept marques.
+- Réduction de TSC et agrandissement équilibré des autres logos.
+- Correction de « TECHNOLOGYS » en « TECHNOLOGIES » dans la version anglaise.

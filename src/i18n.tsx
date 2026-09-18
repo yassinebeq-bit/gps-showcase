@@ -223,9 +223,11 @@ export function getStoredLanguage(): Language {
 }
 
 function translateValue(value: string) {
-  let result = value;
-  for (const [fr, en] of translations) result = result.split(fr).join(en);
-  return result;
+  const trimmed = value.trim();
+  const exact = translations.find(([fr]) => fr === trimmed);
+  if (exact) return value.replace(trimmed, exact[1]);
+  const partial = translations.find(([fr]) => value.includes(fr));
+  return partial ? value.replace(partial[0], partial[1]) : value;
 }
 
 function translateDocument(language: Language) {
