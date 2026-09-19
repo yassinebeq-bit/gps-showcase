@@ -58,3 +58,17 @@ Une tentative d'installation des dépendances avec npm a dépassé le délai dis
 
 - Recadrage interne du SVG POSTEK pour éliminer les marges transparentes.
 - Agrandissement du logo afin d'obtenir un poids visuel cohérent avec les autres marques.
+# Version 20 — visuel terminal sans logo sur la blouse
+
+- Retrait du logo GLOBAL présent sur la blouse de l'opérateur.
+- Conservation du logo et de l'interface GPS affichés sur le terminal mobile.
+- Intégration du visuel retouché dans la famille « Terminaux mobiles » de la page Produits.
+
+# Version 21 — corrections bilingues et bannière GPS
+
+- Traduction des derniers libellés signalés dans la page d'accueil.
+- Ajout d'une version anglaise du comparatif WAX / WAX-RESIN / RESIN.
+- Affichage automatique de l'infographie française ou anglaise selon la langue choisie.
+- Suppression du logo GLOBAL uniquement sur la blouse de l'opérateur au premier plan dans la bannière « Solutions en action ».
+- Conservation des logos sur le terminal, dans l'en-tête de la bannière et sur l'opérateur en arrière-plan.
+- Ajout d'une version anglaise complète de la bannière « Solutions en action ».

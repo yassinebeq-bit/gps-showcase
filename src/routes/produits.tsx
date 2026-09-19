@@ -7,7 +7,7 @@ import { marques, produits, devisMailto, whatsappHref, type Marque } from "@/dat
 import heroProduits from "@/assets/solution-printer.jpg";
 import imageImprimantes from "@/assets/prod-printer.jpg";
 import imageLecteurs from "@/assets/prod-scanner.jpg";
-import imageTerminaux from "@/assets/prod-mobile.jpg";
+import imageTerminaux from "@/assets/prod-terminal-tracabilite.png";
 import imageEtiquettes from "@/assets/bg-etiquettes-adhesives.png";
 import imageRubans from "@/assets/bg-rubans-thermiques.png";
 import imageTextile from "@/assets/prod-textile.jpg";

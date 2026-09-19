@@ -19,13 +19,14 @@ import hero from "@/assets/hero-gps-generic.png";
 import serviceTechniqueBackground from "@/assets/service-technique-gps.png";
 import etiquettesBackground from "@/assets/bg-etiquettes-adhesives.png";
 import rubansInfographic from "@/assets/rubans-transfert-thermique-wax-resin.png";
-import imprimanteEtiquettesAsset from "@/assets/gps-solutions-banner.png.asset.json";
-
-const imprimanteEtiquettes = imprimanteEtiquettesAsset.url;
+import rubansInfographicEn from "@/assets/rubans-transfert-thermique-wax-resin-en.png";
+import imprimanteEtiquettesFr from "@/assets/gps-solutions-banner-fr.png";
+import imprimanteEtiquettesEn from "@/assets/gps-solutions-banner-en.png";
 import { Section } from "@/components/Section";
 import { BrandLogo } from "@/components/BrandLogo";
 import { CONTACT, devisMailto, secteurs, services, whatsappHref } from "@/data/catalogue";
 import type { BrandName } from "@/components/BrandLogo";
+import { useLanguage } from "@/i18n";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -133,6 +134,10 @@ const preuves = [
 ];
 
 function Index() {
+  const { language } = useLanguage();
+  const rubansImage = language === "en" ? rubansInfographicEn : rubansInfographic;
+  const imprimanteEtiquettes = language === "en" ? imprimanteEtiquettesEn : imprimanteEtiquettesFr;
+
   return (
     <>
       <section className="border-b border-border/60 bg-background">
@@ -407,7 +412,7 @@ function Index() {
 
                 <figure className="mt-8 overflow-hidden rounded-2xl border border-white/20 bg-[#07172a] shadow-xl">
                   <img
-                    src={rubansInfographic}
+                    src={rubansImage}
                     alt="Comparatif des rubans transfert thermique WAX, WAX/RESIN et RESIN"
                     loading="lazy"
                     width={1340}
